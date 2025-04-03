@@ -1,6 +1,7 @@
 import React from 'react'
 import instagram from '../assets/Instagram.svg' // Importing the Instagram logo
 import { NavbarType } from '../types/types' // Importing the NavbarType type for TypeScript
+import { MdMenu } from 'react-icons/md'
 
 // Array of navbar items with id, title, and link
 const navbarItems = [
@@ -34,17 +35,17 @@ const navbarItems = [
 const Navbar = () => {
     return (
         // Navbar container with background color and padding
-        <div className='bg-green-300 py-8'>
+        <div className='bg-white  border-b-1'>
             {/* Inner container to center content and space items */}
-            <div className='container flex justify-between'>
+            <div className='container mx-9 flex justify-between items-center'>
                 {/* Logo section */}
-                <div>
-                    <img src={instagram} alt='logo' className='max-w-[100px]' />
+                <div className='h-16 w-16 p-2'>
+                    <img src={instagram} alt='logo' className='object-contain' />
                 </div>
 
                 {/* Navigation links, hidden on small screens */}
                 <div className='hidden md:block'>
-                    <ul className='flex items-center gap-8 '>
+                    <ul className='flex items-center  gap-8 '>
                         {/* Mapping through navbarItems to render each link */}
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
@@ -52,6 +53,9 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
+                </div>
+                <div className='md:hidden'>
+                    <MdMenu className='text-4xl' />
                 </div>
             </div>
         </div>
