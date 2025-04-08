@@ -3,7 +3,7 @@ import home from '../assets/home.png'
 
 const Home = () => {
   return (
-    <div className='bg-amber-500'>
+    <div className='bg-gradient-to-bl from-blue-500 to-purple-500 min-h-screen flex items-center justify-center'>
       <div className='container mx-auto px-4 py-8 md:py-16'>
         {/* Flex container - column on mobile, row on md+ screens */}
         <div className='flex flex-col md:flex-row items-center gap-8 md:gap-12'>
