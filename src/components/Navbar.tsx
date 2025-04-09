@@ -1,8 +1,7 @@
 import React from 'react'
-import instagram from '../assets/Instagram.svg' // Importing the Instagram logo
-import { NavbarType } from '../types/types' // Importing the NavbarType type for TypeScript
+import { NavbarType } from '../types/types'
 import { MdMenu } from 'react-icons/md'
-
+import connection from '../assets/connection.svg'
 // Array of navbar items with id, title, and link
 const navbarItems = [
     {
@@ -27,7 +26,7 @@ const navbarItems = [
     },
     {
         id: 5,
-        title: "Fotter",
+        title: "Contact",
         link: "#"
     },
 ]
@@ -37,15 +36,15 @@ const Navbar = () => {
         // Navbar container with background color and padding
         <div className='bg-white  border-b-1'>
             {/* Inner container to center content and space items */}
-            <div className='container mx-9 flex justify-between items-center'>
+            <div className='container mx-auto  flex justify-between items-center'>
                 {/* Logo section */}
                 <div className='h-16 w-16 p-2'>
-                    <img src={instagram} alt='logo' className='object-contain' />
+                    <img src={connection} alt='logo' className='object-contain' />
                 </div>
 
                 {/* Navigation links, hidden on small screens */}
-                <div className='hidden md:block'>
-                    <ul className='flex items-center  gap-8 '>
+                <div className='hidden md:block ml:auto'>
+                    <ul className='flex  text-4xl gap-8 '>
                         {/* Mapping through navbarItems to render each link */}
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>

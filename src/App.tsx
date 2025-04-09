@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar';
+import Fotter from './layouts/Fotter';
 import Home from './layouts/Home';
 import Skills from './layouts/Skills';
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Home />
       <Skills />
+      <Fotter />
     </div>
   );
 }
