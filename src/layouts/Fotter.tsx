@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <p className="text-gray-300 mb-2">Belfast, UK</p>
-            <p className="text-gray-300 mb-4">email@example.com</p>
+            <p className="text-gray-300 mb-4">r.ogrodowczyk87@gmail.com</p>
 
             {/* Social Media Icons */}
             <div className="flex space-x-4">

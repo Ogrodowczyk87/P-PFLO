@@ -1,3 +1,40 @@
+/* Reset styles */
+*, *:: before, *::after {
+    margin: 0;
+    padding: 0;
+    box - sizing: border - box;
+}
+
+html, body {
+    height: 100 %;
+    overflow - x: hidden;
+}
+
+body {
+    line - height: 1.5;
+    -webkit - font - smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max - width: 100 %;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow - wrap: break-word;
+}
+
+/* Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'], // Ensure Tailwind scans your files
     theme: {
@@ -27,5 +64,16 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        plugin(function ({ addBase }) {
+            addBase({
+                '*': { margin: '0', padding: '0', boxSizing: 'border-box' },
+                'html, body': { height: '100%', overflowX: 'hidden' },
+                'body': { lineHeight: '1.5', WebkitFontSmoothing: 'antialiased' },
+                'img, picture, video, canvas, svg': { display: 'block', maxWidth: '100%' },
+                'input, button, textarea, select': { font: 'inherit' },
+                'p, h1, h2, h3, h4, h5, h6': { overflowWrap: 'break-word' },
+            });
+        }),
+    ],
 };
