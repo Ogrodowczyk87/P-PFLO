@@ -4,3 +4,4 @@ export type NavbarType = {
     title: string;
     link: string;
 }
+
