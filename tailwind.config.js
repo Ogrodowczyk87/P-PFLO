@@ -1,5 +1,3 @@
-
-
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
@@ -30,6 +28,9 @@ module.exports = {
                 '2xl': '1536px', // 2x Extra large screens
             },
         },
+        animation: {
+            'spin-slow': 'spin 3s linear infinite', // Animacja obracania z wolniejszą prędkością
+        }
     },
     plugins: [
         plugin(function ({ addBase }) {

@@ -1,5 +1,7 @@
 import React from 'react'
-import connection from '../assets/connection.svg'
+// import connection from '../assets/connection.svg'
+import Card from '../components/card'
+
 
 const Home = () => {
   return (
@@ -8,12 +10,8 @@ const Home = () => {
         {/* Flex container - column on mobile, row on md+ screens */}
         <div className='flex flex-col md:flex-row items-center gap-6 md:gap-8'>
           {/* Image section - full width on mobile, half on desktop */}
-          <div className='w-full md:w-1/2'>
-            <img
-              src={connection}
-              alt='connection'
-              className='object-contain w-full max-w-md mx-auto'
-            />
+          <div className='w-full md:w-1/2'>      
+           <Card />
           </div>
 
           {/* Text content section - full width on mobile, half on desktop */}

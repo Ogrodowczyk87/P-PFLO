@@ -1,12 +1,11 @@
 import React from 'react'
-import react from '../assets/react.svg'
 import JavaScript from '../assets/JavaScript.svg'
 import TypeScript from '../assets/TypeScript.svg'
 import css from '../assets/css.svg'
-import html from '../assets/html.svg'
 import Github from '../assets/Github.svg'
 import tailwind from '../assets/tailwind.svg'
-
+import linux from '../assets/linux.svg'
+import react from '../assets/react.svg'
 
 const Skills = () => {
   return (
@@ -29,8 +28,8 @@ const Skills = () => {
           </button>
 
           <button className="profile_item -left-4 top-20 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
-            <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1">
-              <img className='rounded-full' src={html} alt="HTML" />
+            <span className="block w-[45px] h-[45px] transition-all duration-500 rounded-full z-[2] bg-white p-1">
+              <img className='rounded-full' src={linux} alt="HTML" />
             </span>
 
           </button>
@@ -62,7 +61,7 @@ const Skills = () => {
           <button className="profile_item w-[200px] h-[200px] p-1 border-2 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
             <div className="w-full bg-white h-full flex items-center justify-center p-2 rounded-full active:scale-95 hover:scale-95 object-cover transition-all duration-500">
               <span className="w-20 h-20 inline-block">
-                <img className='rounded-full' src={html} alt="HTML" />
+                <img className='rounded-full animate-spin-slow'  src={react} alt="react" />
               </span>
             </div>
           </button>
