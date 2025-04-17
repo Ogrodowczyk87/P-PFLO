@@ -32,16 +32,4 @@ module.exports = {
             'spin-slow': 'spin 3s linear infinite', // Animacja obracania z wolniejszą prędkością
         }
     },
-    plugins: [
-        plugin(function ({ addBase }) {
-            addBase({
-                '*': { margin: '0', padding: '0', boxSizing: 'border-box' },
-                'html, body': { height: '100%', overflowX: 'hidden' },
-                'body': { lineHeight: '1.5', WebkitFontSmoothing: 'antialiased' },
-                'img, picture, video, canvas, svg': { display: 'block', maxWidth: '100%' },
-                'input, button, textarea, select': { font: 'inherit' },
-                'p, h1, h2, h3, h4, h5, h6': { overflowWrap: 'break-word' },
-            });
-        }),
-    ],
 };

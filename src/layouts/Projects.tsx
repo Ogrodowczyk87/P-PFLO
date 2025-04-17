@@ -1,53 +1,57 @@
-import React from 'react';
+import SoftwareHouse from '../assets/SoftwareHouse.jpg'; 
+import IceCream from '../assets/IceCream.webp';
+import FilmWeb from '../assets/FilmWeb.png';
+import phonebook from '../assets/phonebook.png'
+import build from '../assets/build.jpg'
 
 const projects = [
   {
     id: 1,
-    title: 'Project One',
-    image: 'https://via.placeholder.com/300x200', // Zastąp linkiem do obrazu
-    github: 'https://github.com/username/project-one',
-    technologies: ['React', 'Tailwind CSS', 'TypeScript'],
-    description: 'A modern web application built with React and Tailwind CSS.',
+    title: 'Software House',
+    image: SoftwareHouse, 
+    github: 'https://github.com/Ogrodowczyk87/software-house.git',
+    technologies: ['HTML', 'SASS', 'JavaScript'],
+    description: 'This is my first mobile-first project, designed with responsiveness in mind. It utilizes HTML, SASS, and JavaScript to create a modern and user-friendly web application.',
   },
   {
     id: 2,
-    title: 'Project Two',
-    image: 'https://via.placeholder.com/300x200',
-    github: 'https://github.com/username/project-two',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
-    description: 'A responsive website built with vanilla JavaScript.',
+    title: 'Ice Cream Shop',
+    image: IceCream,
+    github: 'https://github.com/Ogrodowczyk87/Ice-cream-shop.git',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    description: 'A visually appealing landing page for an ice cream shop, designed with responsiveness in mind. Built using HTML, CSS, and JavaScript to provide a delightful user experience.',
   },
   {
     id: 3,
-    title: 'Project Three',
-    image: 'https://via.placeholder.com/300x200',
-    github: 'https://github.com/username/project-three',
-    technologies: ['Node.js', 'Express', 'MongoDB'],
-    description: 'A backend API built with Node.js and MongoDB.',
+    title: 'FilmWeb',
+    image: FilmWeb,
+    github: 'https://github.com/Ogrodowczyk87/FilmWeb.git',
+    technologies: ['JavaScript', 'Sass', 'API'],
+    description: 'A collaborative project developed with a team, featuring a movie database web application. It uses JavaScript, Sass, and external APIs to provide users with movie information, ratings, and reviews.',
   },
   {
     id: 4,
-    title: 'Project Four',
-    image: 'https://via.placeholder.com/300x200',
-    github: 'https://github.com/username/project-four',
+    title: 'Phonebook App',
+    image: phonebook,
+    github: 'https://github.com/Ogrodowczyk87/goit-react-hw-08-phonebook.git',
     technologies: ['React', 'Redux', 'Firebase'],
-    description: 'A real-time chat application using React and Firebase.',
+    description: 'A contact management application built with React and Redux. It allows users to add, edit, and delete contacts, with real-time data synchronization using Firebase.',
   },
   {
     id: 5,
     title: 'Project Five',
-    image: 'https://via.placeholder.com/300x200',
-    github: 'https://github.com/username/project-five',
-    technologies: ['Next.js', 'Tailwind CSS'],
-    description: 'A server-side rendered website built with Next.js.',
+    image: build,
+    github: '',
+    technologies: ['---', '---'],
+    description: 'This project is currently under construction. More details will be available soon.',
   },
   {
     id: 6,
     title: 'Project Six',
-    image: 'https://via.placeholder.com/300x200',
-    github: 'https://github.com/username/project-six',
-    technologies: ['Python', 'Flask', 'SQLAlchemy'],
-    description: 'A RESTful API built with Flask and SQLAlchemy.',
+    image: build,
+    github: '',
+    technologies: ['---', '---', '---'],
+    description: 'This project is currently under construction. More details will be available soon.',
   },
 ];
 
@@ -65,7 +69,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-fill"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -88,7 +92,8 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          ))}
+            
+          ))}             
         </div>
       </div>
     </div>

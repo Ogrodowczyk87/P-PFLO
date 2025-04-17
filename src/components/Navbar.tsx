@@ -31,20 +31,20 @@ const navbarItems = [
     },
 ]
 
-const Navbar = () => {
+export const Navbar = () => {
     return (
         // Navbar container with background color and padding
         <div className='bg-white  border-b-1'>
             {/* Inner container to center content and space items */}
             <div className='container mx-auto  flex justify-between items-center'>
                 {/* Logo section */}
-                <div className='h-16 w-16 p-2'>
+                <div className='h-16 w-16 p-2 ml-[50px]'>
                     <img src={connection} alt='logo' className='object-contain' />
                 </div>
 
                 {/* Navigation links, hidden on small screens */}
-                <div className='hidden md:block ml:auto'>
-                    <ul className='flex  text-4xl gap-8 '>
+                <div className='hidden md:block mr-[80px] '>
+                    <ul className='flex  text-4xl gap-8  '>
                         {/* Mapping through navbarItems to render each link */}
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
