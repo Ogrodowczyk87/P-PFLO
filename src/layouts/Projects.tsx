@@ -3,8 +3,7 @@ import SoftwareHouse from '../assets/SoftwareHouse.jpg';
 import IceCream from '../assets/IceCream.webp';
 import FilmWeb from '../assets/FilmWeb.png';
 import phonebook from '../assets/phonebook.png';
-import build from '../assets/build.jpg';
-import Profile from './Profile'; // Import nowego komponentu
+import build from '../assets/build.svg';
 
 const projects = [
   {
@@ -65,7 +64,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-800 py-12 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -77,7 +76,9 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className={`w-full h-48 ${
+                  project.id === 5 || project.id === 6 ? 'h-32 w-32 object-contain mx-auto mt-4' : 'object-cover'
+                }`}
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -104,7 +105,7 @@ const Projects = () => {
         </div>
 
         {/* Dodanie sekcji profilu */}
-        <Profile />
+        
       </div>
     </div>
   );

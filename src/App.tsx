@@ -4,6 +4,7 @@ import Fotter from './layouts/Fotter';
 import Home from './layouts/Home';
 import Skills from './layouts/Skills';
 import Projects from './layouts/Projects';
+import Profile from './layouts/Profile';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Home />
       <Skills />
       <Projects />
+      <Profile />
       <Fotter />
     </div>
   );

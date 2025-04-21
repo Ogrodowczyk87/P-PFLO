@@ -3,7 +3,7 @@ import rafal from '../assets/rafal.jpg';
 
 const Profile = () => {
   return (
-    <div className="bg-gray-800 mt-4 rounded-2xl py-12">
+    <div className="bg-gray-100  py-12">
       <div className="container mx-auto px-4">
         {/* Profile and Contact Form Section */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
