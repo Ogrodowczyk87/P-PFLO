@@ -10,7 +10,7 @@ import react from '../assets/react.svg'
 const Skills = () => {
   return (
 
-    <div>
+    <div id='Skills'>
       <h2 className='  bg-gray-800 border-t-2 flex justify-center text-5xl pb-8 text-white pt-8'>This are some of my Skills</h2>
       <div className="relative h-full w-full flex items-center justify-center pt-[100px] pb-[100px]">
         <div className="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">

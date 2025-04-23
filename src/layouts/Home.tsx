@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 
 const Home = () => {
   return (
-        <div className='flex items-start justify-center mt-[80px] mb-[80px] border-b-orange-100 xl:pl-[110px] xl:pr-[40px]'>
+        <div id='AboutMe' className='flex items-start justify-center mt-[80px] mb-[80px] border-b-orange-100 xl:pl-[110px] xl:pr-[40px]'>
     
       <div className='container pt-5 pb-5 md:pt-3 md:pb-6'>
         {/* Flex container - column on mobile, row on md+ screens */}
