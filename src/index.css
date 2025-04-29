@@ -1,15 +1,69 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
-  margin: 0;
-  padding: 0;
-  /* min-height: 100vh; */
   height: 100%;
-  /* overflow-x: hidden; */
-  /* Zapobiega poziomemu przewijaniu */
+  margin: 0;
+}
+
+@theme {
+  --color-primary: #4f46e5;
+  --color-primary-foreground: #fbbf24;
+  --color-secondary: #fbbf24;
+  --color-secondary-foreground: #000;
+
+  /* Additional Colors */
+  --color-accent: #10b981;
+  --color-accent-foreground: #ffffff;
+  --color-muted: #6b7280;
+  --color-muted-foreground: #f3f4f6;
+
+  /* Gradient */
+  --color-custom: linear-gradient(90deg,
+      rgba(114, 106, 138, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(7, 50, 148, 1) 48%,
+      rgba(4, 111, 188, 1) 68%,
+      rgba(0, 212, 255, 1) 87%,
+      rgba(1, 191, 241, 1) 93%);
+
+  /* Custom Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  --font-mono: 'Fira Code', monospace;
+  --font-crazy1: 'Comic Sans MS', cursive, sans-serif;
+  --font-crazy2: 'Papyrus', fantasy;
+  --font-crazy3: 'Impact', sans-serif;
+
+  /* Screen Sizes */
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1280px;
+  --screen-2xl: 1536px;
+}
+
+/* Kolory tła */
+.bg-navbar-sticky {
+  background-color: var(--color-primary);
+}
+
+.bg-navbar-default {
+  background-color: var(--color-secondary);
+}
+
+/* Gradient */
+.bg-custom-gradient {
+  background: var(--color-custom);
+  background-size: cover;
+  /* Upewnia się, że gradient pokrywa cały element */
+}
+
+/* Kolory tekstu */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
 }

@@ -1,6 +1,8 @@
 import { NavbarType } from '../types/types'
 import { MdMenu } from 'react-icons/md'
 import logo   from '../assets/logo.png'
+import { useEffect } from 'react';
+import { useState } from 'react';
 // Array of navbar items with id, title, and link
 const navbarItems = [
     {
@@ -31,9 +33,27 @@ const navbarItems = [
 ]
 
 export const Navbar = () => {
+    const [isSticky, setIsSticky] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsSticky(true)
+            } else {
+                setIsSticky(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }       
+    })
+
+
     return (
         // Navbar container with background color and padding
-        <div className='bg-white border-b-1 sticky top-0 z-50'>
+        <div className={`border-b-1 sticky top-0 z-50 ${isSticky ? 'bg-gray-100 shadow-md' : ''}`}>
             {/* Inner container to center content and space items */}
             <div className='container mx-auto flex justify-between items-center'>
                 {/* Logo section */}
