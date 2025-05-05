@@ -28,12 +28,11 @@ body {
       rgba(1, 191, 241, 1) 93%);
 
   /* Custom Fonts */
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Merriweather', serif;
-  --font-mono: 'Fira Code', monospace;
-  --font-crazy1: 'Comic Sans MS', cursive, sans-serif;
-  --font-crazy2: 'Papyrus', fantasy;
-  --font-crazy3: 'Impact', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-open-sans: 'Open Sans', sans-serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 
   /* Screen Sizes */
   --screen-sm: 640px;

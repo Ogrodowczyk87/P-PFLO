@@ -1,8 +1,8 @@
-import { NavbarType } from '../types/types'
-import { MdMenu } from 'react-icons/md'
-import logo   from '../assets/logo.png'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { NavbarType } from '../types/types';
+import { MdMenu } from 'react-icons/md';
+import logo from '../assets/logo.png';
+import { useEffect, useState } from 'react';
+
 // Array of navbar items with id, title, and link
 const navbarItems = [
     {
@@ -10,11 +10,6 @@ const navbarItems = [
         title: "AboutMe",
         link: "#AboutMe"
     },
-    // {
-    //     id: 2,
-    //     title: "Home",
-    //     link: "#"
-    // },
     {
         id: 3,
         title: "Skills",
@@ -30,26 +25,25 @@ const navbarItems = [
         title: "Contact",
         link: "#Contact"
     },
-]
+];
 
 export const Navbar = () => {
-    const [isSticky, setIsSticky] = useState(false)
+    const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
-                setIsSticky(true)
+                setIsSticky(true);
             } else {
-                setIsSticky(false)
+                setIsSticky(false);
             }
-        }
+        };
 
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }       
-    })
-
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
 
     return (
         // Navbar container with background color and padding
@@ -63,11 +57,11 @@ export const Navbar = () => {
 
                 {/* Navigation links, hidden on small screens */}
                 <div className='hidden md:block mr-[80px]'>
-                    <ul className="flex text-4xl gap-8">
+                    <ul className="flex text-2xl gap-8 font-poppins">
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
                                 <a
-                                    className="mky-btn3 relative hover:text-[#778464] py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 hover:transition-all hover:duration-500 after:transition-all after:duration-500 after:hover:transition-all after:hover:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-[#abd373] after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-gray-600s"
+                                    className="mky-btn3 relative hover:text-blue-500 py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 hover:transition-all hover:duration-500 after:transition-all after:duration-500 after:hover:transition-all after:hover:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-blue-500 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-shadow-blue-500"
                                     href={item.link}
                                 >
                                     {item.title}
@@ -81,7 +75,7 @@ export const Navbar = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

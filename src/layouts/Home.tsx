@@ -3,17 +3,23 @@ import Card from '../components/card';
 
 const Home = () => {
   return (
-    <div id="AboutMe" className="bg-gray-100 flex items-start justify-center mb-[80px] border-b-orange-100 xl:pl-[110px] xl:pr-[40px]">
-      <div className="container pt-5 pb-5 md:pt-3 md:pb-6 mt-[80px] mb-[80px]">
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+    <div
+      id="AboutMe"
+      className="bg-gray-50 flex items-start justify-center border-b border-gray-300 xl:pl-[110px] xl:pr-[40px] py-10"
+    >
+      <div className="bg-white container shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          {/* Card Section */}
           <div className="w-full md:w-1/2">
-            <Card />
+            <Card className="shadow-md rounded-lg p-6" />
           </div>
-          <div className="w-full md:w-1/2 text-center md:text-left mt-4 md:mt-0">
-            <h1 className="text-3xl md:text-5xl font-bold mb-5">
+
+          {/* Text Section */}
+          <div className="w-full md:w-1/2 text-center md:text-left mt-6 md:mt-0">
+            <h1 className="text-4xl md:text-5xl font-poppins font-bold text-gray-800 mb-6">
               Rafal Ogrodowczyk | Junior Frontend Developer
             </h1>
-            <p className="text-lg md:text-xl text-black">
+            <p className="text-lg md:text-xl font-open-sans text-gray-700 leading-relaxed">
               Hi, I'm Rafal Ogrodowczyk, a passionate Junior Frontend Developer based in Belfast. I have a deep enthusiasm for new technologies and enjoy creating modern web experiences. With dedication to clean code and user-friendly interfaces, I'm constantly expanding my skills in the ever-evolving tech landscape.
             </p>
           </div>
