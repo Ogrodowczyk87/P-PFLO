@@ -47,7 +47,7 @@ export const Navbar = () => {
 
     return (
         // Navbar container with background color and padding
-        <div className={`border-b-1 sticky top-0 z-50 ${isSticky ? 'bg-gray-100 shadow-md' : ''}`}>
+        <div className={`border-b-1 sticky top-0 z-50 ${isSticky ? 'bg-gray-400 shadow-md' : ''}`}>
             {/* Inner container to center content and space items */}
             <div className='container mx-auto flex justify-between items-center'>
                 {/* Logo section */}
