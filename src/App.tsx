@@ -14,9 +14,9 @@ function App() {
       <Navbar />
       <Home />
       <Hobby /> {/* Hobby section */}
-      <Experiences /> {/* Add Experiences component here */}
       <Skills />
       <Projects />
+      <Experiences /> {/* Add Experiences component here */}
       <Profile />
       <Fotter />
     </div>
