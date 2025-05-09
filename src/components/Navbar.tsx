@@ -7,8 +7,8 @@ import { useEffect, useState } from 'react';
 const navbarItems = [
     {
         id: 1,
-        title: "AboutMe",
-        link: "#AboutMe"
+        title: "Home",
+        link: "#Home"
     },
     {
         id: 3,
@@ -24,6 +24,11 @@ const navbarItems = [
         id: 5,
         title: "Contact",
         link: "#Contact"
+    },
+    {
+        id: 5,
+        title: "Experience",
+        link: "#Experience"
     },
 ];
 

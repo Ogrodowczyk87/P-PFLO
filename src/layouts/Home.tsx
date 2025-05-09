@@ -5,7 +5,7 @@ import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 const Home = () => {
   return (
     <div
-      id="AboutMe"
+      id="Home"
       className="bg-blue-50 flex items-start justify-center border-b border-dark-blue xl:pl-[110px] xl:pr-[40px] py-10"
     >
       <div className="bg-white container shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">

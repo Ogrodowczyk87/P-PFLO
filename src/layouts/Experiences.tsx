@@ -37,7 +37,7 @@ const experiences = [
 
 const Experiences = () => {
     return (
-        <div id="Experiences" className="bg-blue-50 py-16">
+        <div id="Experience" className="bg-blue-50 py-16">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
                     My Experiences
