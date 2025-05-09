@@ -2,35 +2,7 @@ import { NavbarType } from '../types/types';
 import { MdMenu } from 'react-icons/md';
 import logo from '../assets/logo.png';
 import { useEffect, useState } from 'react';
-
-// Array of navbar items with id, title, and link
-const navbarItems = [
-    {
-        id: 1,
-        title: "Home",
-        link: "#Home"
-    },
-    {
-        id: 3,
-        title: "Skills",
-        link: "#Skills"
-    },
-    {
-        id: 4,
-        title: "Projects",
-        link: "#Projects"
-    },
-    {
-        id: 5,
-        title: "Contact",
-        link: "#Contact"
-    },
-    {
-        id: 5,
-        title: "Experience",
-        link: "#Experience"
-    },
-];
+import { navbarItems } from '../data/navbarData';
 
 export const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -54,7 +26,7 @@ export const Navbar = () => {
         // Navbar container with background color and padding
         <div className={`border-b-1 sticky top-0 z-50 ${isSticky ? 'bg-light-blue shadow-md' : ''}`}>
             {/* Inner container to center content and space items */}
-            <div className='container  mx-auto flex justify-between items-center'>
+            <div className='container mx-auto flex justify-between items-center'>
                 {/* Logo section */}
                 <div className='w-56 p-2 ml-[50px]'>
                     <img src={logo} alt='logo' className='object-contain' />

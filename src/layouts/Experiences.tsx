@@ -1,39 +1,6 @@
 import React from 'react';
-
-const experiences = [
-    {
-        id: 1,
-        title: 'Frontend Developer Intern',
-        company: 'Tech Solutions',
-        duration: 'Jan 2023 - Jun 2023',
-        description:
-            'Worked on building responsive web applications using React and Tailwind CSS. Collaborated with designers and backend developers to deliver high-quality projects.',
-    },
-    {
-        id: 2,
-        title: 'Freelance Web Developer',
-        company: 'Self-Employed',
-        duration: 'Jul 2023 - Present',
-        description:
-            'Developed custom websites for small businesses, focusing on performance, SEO, and user experience.',
-    },
-    {
-        id: 3,
-        title: 'Freelance Web Developer',
-        company: 'Self-Employed',
-        duration: 'Jul 2023 - Present',
-        description:
-            'Developed custom websites for small businesses, focusing on performance, SEO, and user experience.',
-    },
-    {
-        id: 4,
-        title: 'Freelance Web Developer',
-        company: 'Self-Employed',
-        duration: 'Jul 2023 - Present',
-        description:
-            'Developed custom websites for small businesses, focusing on performance, SEO, and user experience.',
-    },
-];
+import { Chrono } from 'react-chrono';
+import { experiences } from '../data/experiencesData';
 
 const Experiences = () => {
     return (
@@ -42,24 +9,55 @@ const Experiences = () => {
                 <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
                     My Experiences
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {experiences.map((experience) => (
-                        <div
-                            key={experience.id}
-                            className="bg-white shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:shadow-2xl"
-                        >
-                            <h3 className="text-xl font-semibold text-dark-blue mb-2">
-                                {experience.title}
-                            </h3>
-                            <p className="text-warm-orange font-medium mb-1">
-                                {experience.company}
-                            </p>
-                            <p className="text-teal mb-4">{experience.duration}</p>
-                            <p className="text-dark-blue">{experience.description}</p>
-                        </div>
-                    ))}
+                <div style={{ width: '100%', height: 'auto' }}>
+                    <Chrono
+                        items={experiences}
+                        mode="VERTICAL"
+                        cardHeight={150}
+                        hideControls={true}
+                        disableNavOnKey
+                        disableToolbar
+                        scrollable={false}
+                        useReadMore={false}
+                        showAllCardsHorizontal={false}
+                        enableOutline={false}
+                        theme={{
+                            primary: '#2C3E50',
+                            secondary: '#F39C12',
+                            cardBgColor: '#FFFFFF',
+                            cardForeColor: '#2C3E50',
+                            titleColor: '#F39C12',
+                        }}
+                    />
                 </div>
             </div>
+            <style global jsx>{`
+                .chrono-controls, 
+                .chrono-icons, 
+                .chrono-container .timeline-main-wrapper .timeline-controls,
+                .timeline-controls-wrapper {
+                    display: none !important;
+                    visibility: hidden !important;
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+
+                /* Disable scrolling */
+                .chrono-container {
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+
+                .timeline-main-wrapper {
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+
+                .timeline-vertical-container {
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+            `}</style>
         </div>
     );
 };

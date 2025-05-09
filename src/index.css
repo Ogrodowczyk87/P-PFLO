@@ -7,17 +7,28 @@ body {
 }
 
 @theme {
---color-black: #1E1E2F; /* Darker black for text and backgrounds */
---color-dark-blue: #2C3E50; /* Professional dark blue for headers and accents */
---color-accent-yellow: #F39C12; /* Warm yellow for highlights and call-to-actions */
---color-light-beige: #FDF6EC; /* Light beige for backgrounds */
---color-white: #FFFFFF; /* Pure white for text and cards */
---color-warm-orange: #FF6F3C; /* Vibrant orange for buttons and accents */
---color-soft-pink: #FAD4D8; /* Soft pink for subtle highlights */
---color-light-blue: #A7C5EB; /* Light blue for secondary elements */
---color-dark-red: #D72638; /* Dark red for strong accents */
---color-teal: #008080; /* Teal for calming accents */
---color-cod: #F7F9FB; /* Soft off-white for subtle backgrounds */
+  --color-black: #1E1E2F;
+  /* Darker black for text and backgrounds */
+  --color-dark-blue: #2C3E50;
+  /* Professional dark blue for headers and accents */
+  --color-accent-yellow: #F39C12;
+  /* Warm yellow for highlights and call-to-actions */
+  --color-light-beige: #FDF6EC;
+  /* Light beige for backgrounds */
+  --color-white: #FFFFFF;
+  /* Pure white for text and cards */
+  --color-warm-orange: #FF6F3C;
+  /* Vibrant orange for buttons and accents */
+  --color-soft-pink: #FAD4D8;
+  /* Soft pink for subtle highlights */
+  --color-light-blue: #A7C5EB;
+  /* Light blue for secondary elements */
+  --color-dark-red: #D72638;
+  /* Dark red for strong accents */
+  --color-teal: #008080;
+  /* Teal for calming accents */
+  --color-cod: #F7F9FB;
+  /* Soft off-white for subtle backgrounds */
 
   /* Additional Colors */
   --color-accent: #10b981;
