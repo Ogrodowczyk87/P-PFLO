@@ -1,6 +1,37 @@
+import { useRef } from 'react';
 import rafal from '../assets/rafal.jpg';
 
 const Profile = () => {
+
+  // EmailJS npm install @emailjs/browser
+  const form = useRef()
+  const [status, setStatus] = useState({
+    submitting: false,
+    message: '',
+  })
+
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    setStatus({ submitting: true, message: '' })
+
+    emailjs
+      .sendForm(
+        'service_id',
+        'template_id',
+        form.current,
+        'public_key'
+      ).then(
+
+    )
+  }, (error) => {
+    setStatus({
+      submitting: true,
+      message: 'Error sending email. Please try again later.',
+    })
+  }
+
+
   return (
     <div id="Contact" className=" py-16 border-t-2 border-dark-blue">
       <div className="container mx-auto px-4">

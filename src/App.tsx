@@ -10,7 +10,7 @@ import Experiences from './layouts/Experiences'; // Import Experiences component
 
 function App() {
   return (
-    <div className='gradient-bg'>
+    <div className='bg-stone-100'>
       <Navbar />
       <Home />
       <Hobby /> {/* Hobby section */}
