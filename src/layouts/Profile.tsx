@@ -21,7 +21,12 @@ const Profile = () => {
         'template_id',
         form.current,
         'public_key'
-      ).then(
+      ).then((result) => {
+        setStatus({
+          submitting: false,
+          message: 'Email sent successfully! I will get back to you soon.',
+        })
+      }
 
     )
   }, (error) => {
@@ -59,7 +64,12 @@ const Profile = () => {
             <h3 className="text-2xl font-poppins font-bold text-center text-dark-blue mb-6">
               Contact Me
             </h3>
-            <form className="space-y-6">
+            {status.submitted && (
+               <div className={`p-4 rounded-lg mb-4 ${status.message.includes('successfully') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+               {status.message}
+             </div>
+            )}
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-dark-blue font-medium">
                   Name
