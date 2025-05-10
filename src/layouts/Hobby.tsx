@@ -3,7 +3,7 @@ import { hobbies } from '../data/hobbiesData';
 
 const Hobby = () => {
   return (
-    <div id="Hobby" className="bg-light-beige py-16 flex items-center justify-center">
+    <div id="Hobby" className=" py-16 flex items-center justify-center">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
           My Hobbies

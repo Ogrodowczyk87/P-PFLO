@@ -6,9 +6,9 @@ const Home = () => {
   return (
     <div
       id="Home"
-      className="bg-blue-50 flex items-start justify-center border-b border-dark-blue xl:pl-[110px] xl:pr-[40px] py-10"
+      className="bg-cod flex items-start justify-center border-b border-dark-blue xl:pl-[110px] xl:pr-[40px] py-10"
     >
-      <div className="bg-white container shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">
+      <div className="container shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Card Section */}
           <div className="w-full md:w-1/2">

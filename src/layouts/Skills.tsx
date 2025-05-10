@@ -9,7 +9,7 @@ import react from '../assets/react.svg';
 
 const Skills = () => {
   return (
-    <div id="Skills" className="bg-blue-50 py-16 border-t-2 border-gray-dark pb-[150px] pt-[80px]">
+    <div id="Skills" className="bg-cod py-16 border-t-2 border-gray-dark pb-[150px] pt-[80px]">
       {/* Section Title */}
       <h2 className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue text-center mb-12">
         My Skills

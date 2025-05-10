@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <div
       id="Projects"
-      className="bg-light-beige py-16 border-t-2 border-dark-blue"
+      className="py-16 border-t-2 border-dark-blue"
     >
       <div className="container mx-auto px-4 bg-white shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">
         <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
