@@ -8,35 +8,20 @@ body {
 
 @theme {
   --color-black: #1E1E2F;
-  /* Darker black for text and backgrounds */
   --color-dark-blue: #2C3E50;
-  /* Professional dark blue for headers and accents */
   --color-accent-yellow: #F39C12;
-  /* Warm yellow for highlights and call-to-actions */
   --color-light-beige: #FDF6EC;
-  /* Light beige for backgrounds */
   --color-white: #FFFFFF;
-  /* Pure white for text and cards */
   --color-warm-orange: #FF6F3C;
-  /* Vibrant orange for buttons and accents */
   --color-soft-pink: #FAD4D8;
-  /* Soft pink for subtle highlights */
   --color-light-blue: #A7C5EB;
-  /* Light blue for secondary elements */
   --color-dark-red: #D72638;
-  /* Dark red for strong accents */
   --color-teal: #008080;
-  /* Teal for calming accents */
   --color-cod: #F7F9FB;
-  /* Soft off-white for subtle backgrounds */
-
-  /* Additional Colors */
   --color-accent: #10b981;
   --color-accent-foreground: #ffffff;
   --color-muted: #6b7280;
   --color-muted-foreground: #f3f4f6;
-
-  /* Gradient */
   --color-custom: linear-gradient(90deg,
       rgba(114, 106, 138, 1) 0%,
       rgba(9, 9, 121, 1) 35%,
@@ -45,14 +30,12 @@ body {
       rgba(0, 212, 255, 1) 87%,
       rgba(1, 191, 241, 1) 93%);
 
-  /* Custom Fonts */
   --font-roboto: 'Roboto', sans-serif;
   --font-open-sans: 'Open Sans', sans-serif;
   --font-lato: 'Lato', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-montserrat: 'Montserrat', sans-serif;
 
-  /* Screen Sizes */
   --screen-sm: 640px;
   --screen-md: 768px;
   --screen-lg: 1024px;
@@ -62,29 +45,27 @@ body {
 
 /* Kolory tła */
 .bg-navbar-sticky {
-  background-color: var(--color-primary);
+  background-color: var(--color-dark-blue);
 }
 
 .bg-navbar-default {
-  background-color: var(--color-secondary);
+  background-color: var(--color-light-beige);
 }
 
 /* Gradient */
 .bg-custom-gradient {
   background: var(--color-custom);
   background-size: cover;
-  /* Upewnia się, że gradient pokrywa cały element */
 }
 
 /* Kolory tekstu */
 .text-primary {
-  color: var(--color-primary);
+  color: var(--color-dark-blue);
 }
 
 .text-secondary {
-  color: var(--color-secondary);
+  color: var(--color-light-blue);
 }
-
 
 /* styles.css */
 .gradient-bg {

@@ -23,7 +23,7 @@ const Profile = () => {
         'service_n94uv5g',
         'template_ivty839',
         form.current,
-        '8YqCDLsr_FXl4g2Ey'  // Ten sam Public Key
+        '8YqCDLsr_FXl4g2Ey'  
       )
         .then(() => {
           setStatus({

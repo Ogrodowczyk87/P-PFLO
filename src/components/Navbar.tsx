@@ -1,11 +1,12 @@
 import { NavbarType } from '../types/types';
-import { MdMenu } from 'react-icons/md';
+import { MdMenu, MdClose } from 'react-icons/md';
 import logo from '../assets/logo.png';
 import { useEffect, useState } from 'react';
 import { navbarItems } from '../data/navbarData';
 
 export const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,19 +21,19 @@ export const Navbar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    });
+    }, []);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen((prev) => !prev);
+    };
 
     return (
-        // Navbar container with background color and padding
         <div className={`h-[120px] border-b-1 sticky top-0 z-50 ${isSticky ? 'bg-stone-200 shadow-md' : ''}`}>
-            {/* Inner container to center content and space items */}
             <div className='container mx-auto flex justify-between items-center'>
-                {/* Logo section */}
                 <div className='w-56 p-2 ml-[50px]'>
                     <img src={logo} alt='logo' className='object-contain' />
                 </div>
 
-                {/* Navigation links, hidden on small screens */}
                 <div className='hidden md:block mr-[80px]'>
                     <ul className="flex text-2xl gap-8 font-poppins">
                         {navbarItems.map((item: NavbarType) => (
@@ -47,10 +48,31 @@ export const Navbar = () => {
                         ))}
                     </ul>
                 </div>
+
                 <div className='md:hidden mr-[20px]'>
-                    <MdMenu className='text-4xl' />
+                    <button onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
+                        {isMobileMenuOpen ? <MdClose className='text-4xl' /> : <MdMenu className='text-4xl' />}
+                    </button>
                 </div>
             </div>
+
+            {isMobileMenuOpen && (
+                <div className="md:hidden bg-stone-200 shadow-md absolute top-[120px] left-0 w-full z-40">
+                    <ul className="flex flex-col text-xl gap-4 font-poppins p-4">
+                        {navbarItems.map((item: NavbarType) => (
+                            <li key={item.id}>
+                                <a
+                                    className="block py-2 px-4 text-dark-blue hover:bg-blue-500 hover:text-white rounded transition-colors"
+                                    href={item.link}
+                                    onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
+                                >
+                                    {item.title}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };
