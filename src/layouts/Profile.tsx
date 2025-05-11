@@ -44,7 +44,6 @@ const Profile = () => {
     <div id="Contact" className="py-16 border-t-2 border-dark-blue">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-          {/* Profile Section */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl">
             <div className="flex flex-col items-center">
               <img
@@ -61,7 +60,6 @@ const Profile = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl">
             <h3 className="text-2xl font-poppins font-bold text-center text-dark-blue mb-6">
               Contact Me
@@ -107,7 +105,7 @@ const Profile = () => {
                   name="message"
                   className="w-full border border-light-gray rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-accent-yellow"
                   placeholder="Your Message"
-                  rows="4"
+                  rows={4}
                   required
                 ></textarea>
               </div>

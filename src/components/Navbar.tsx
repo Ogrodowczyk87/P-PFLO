@@ -49,6 +49,7 @@ export const Navbar = () => {
                     </ul>
                 </div>
 
+                {/* Mobile menu toggle button */}
                 <div className='md:hidden mr-[20px]'>
                     <button onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
                         {isMobileMenuOpen ? <MdClose className='text-4xl' /> : <MdMenu className='text-4xl' />}
@@ -56,6 +57,7 @@ export const Navbar = () => {
                 </div>
             </div>
 
+            {/* Mobile menu */}
             {isMobileMenuOpen && (
                 <div className="md:hidden bg-stone-200 shadow-md absolute top-[120px] left-0 w-full z-40">
                     <ul className="flex flex-col text-xl gap-4 font-poppins p-4">

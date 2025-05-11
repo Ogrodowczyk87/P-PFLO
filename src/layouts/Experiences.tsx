@@ -1,4 +1,3 @@
-import React from 'react';
 import { Chrono } from 'react-chrono';
 import { experiences } from '../data/experiencesData';
 
@@ -42,7 +41,6 @@ const Experiences = () => {
                     pointer-events: none !important;
                 }
 
-                /* Disable scrolling */
                 .chrono-container {
                     overflow: visible !important;
                     height: auto !important;
