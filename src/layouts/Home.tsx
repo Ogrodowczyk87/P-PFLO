@@ -21,7 +21,7 @@ const Home = () => {
             </p>
             <div className="flex justify-center md:justify-start mt-6 space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/zastrzyk_87/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-blue hover:text-accent-yellow transition-colors"
@@ -29,7 +29,7 @@ const Home = () => {
                 <FaInstagram size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/rafal-ogrodowczyk-85648a251/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-blue hover:text-accent-yellow transition-colors"
@@ -37,7 +37,7 @@ const Home = () => {
                 <FaLinkedin size={24} />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Ogrodowczyk87"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark-blue hover:text-accent-yellow transition-colors"
