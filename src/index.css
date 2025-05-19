@@ -7,6 +7,7 @@ body {
 }
 
 @theme {
+  --color-background:  #49a9e9;
   --color-black: #1E1E2F;
   --color-dark-blue: #2C3E50;
   --color-accent-yellow: #F39C12;
@@ -43,9 +44,9 @@ body {
   --screen-2xl: 1536px;
 }
 
-/* Kolory tła */
+/* Background color */
 .bg-navbar-sticky {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-background);
 }
 
 .bg-navbar-default {
@@ -58,7 +59,7 @@ body {
   background-size: cover;
 }
 
-/* Kolory tekstu */
+/* Color text */
 .text-primary {
   color: var(--color-dark-blue);
 }

@@ -28,7 +28,7 @@ export const Navbar = () => {
     };
 
     return (
-        <div className={`h-[140px] border-b-1 sticky  top-0 z-50 ${isSticky ? 'bg-stone-200 shadow-md' : ''}`}>
+        <div className={`h-[140px] bg-background border-b-1 sticky  top-0 z-50 ${isSticky ? 'bg-stone-200 shadow-md' : ''}`}>
             <div className='container  mx-auto flex justify-between items-center'>
                 <div className='w-56 p-2 ml-[50px] '>
                     <img src={logo} alt='logo' className='object-contain' />
@@ -39,7 +39,7 @@ export const Navbar = () => {
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
                                 <a
-                                    className="mky-btn3 relative hover:text-blue-500 py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] "
+                                    className="mky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] "
                                     href={item.link}
                                 >
                                     {item.title}
