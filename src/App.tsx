@@ -7,6 +7,7 @@ import Projects from './layouts/Projects';
 import Profile from './layouts/Profile';
 import Hobby from './layouts/Hobby'; // Import Hobby component
 import Experiences from './layouts/Experiences'; // Import Experiences component
+import Certificates from './layouts/Certificates';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <Hobby /> {/* Hobby section */}
       <Skills />
+      <Certificates />
       <Projects />
       <Experiences /> {/* Add Experiences component here */}
       <Profile />
@@ -24,4 +26,3 @@ function App() {
 }
 
 export default App;
-
