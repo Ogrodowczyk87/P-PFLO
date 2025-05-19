@@ -28,9 +28,9 @@ export const Navbar = () => {
     };
 
     return (
-        <div className={`h-[120px] border-b-1 sticky top-0 z-50 ${isSticky ? 'bg-stone-200 shadow-md' : ''}`}>
-            <div className='container mx-auto flex justify-between items-center'>
-                <div className='w-56 p-2 ml-[50px]'>
+        <div className={`h-[140px] border-b-1 sticky  top-0 z-50 ${isSticky ? 'bg-stone-200 shadow-md' : ''}`}>
+            <div className='container  mx-auto flex justify-between items-center'>
+                <div className='w-56 p-2 ml-[50px] '>
                     <img src={logo} alt='logo' className='object-contain' />
                 </div>
 

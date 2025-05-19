@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import rafal from '../assets/rafal.jpg';
+import { motion } from 'framer-motion';
 
 const Profile = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -44,7 +45,13 @@ const Profile = () => {
     <div id="Contact" className="py-16 border-t-2 border-dark-blue">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: -200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl"
+          >
             <div className="flex flex-col items-center">
               <img
                 src={rafal}
@@ -58,9 +65,15 @@ const Profile = () => {
                 Feel free to reach out to me for collaboration or inquiries!
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl"
+          >
             <h3 className="text-2xl font-poppins font-bold text-center text-dark-blue mb-6">
               Contact Me
             </h3>
@@ -116,7 +129,7 @@ const Profile = () => {
                 Send Message
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

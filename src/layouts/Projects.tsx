@@ -1,5 +1,6 @@
 import React from 'react';
 import { projects } from '../data/projectsData';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
@@ -12,10 +13,14 @@ const Projects = () => {
           My Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, idx) => (
+            <motion.div
               key={project.id}
               className="bg-cod shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl border border-gray"
+              initial={{ opacity: 0, y: 180 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: idx * 0.15, ease: 'easeOut' }}
             >
               <img
                 src={project.image}
@@ -49,7 +54,7 @@ const Projects = () => {
                   </a>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
