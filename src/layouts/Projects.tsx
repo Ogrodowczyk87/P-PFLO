@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div
       id="Projects"
-      className="py-16 border-t-2 border-dark-blue"
+      className="py-16 "
     >
       <div className="container mx-auto px-4 bg-white shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">
         <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
@@ -16,7 +16,7 @@ const Projects = () => {
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
-              className="bg-cod shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl border border-gray"
+              className="bg-cod shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
               initial={{ opacity: 0, y: 180 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}

@@ -5,21 +5,20 @@ import Home from './layouts/Home';
 import Skills from './layouts/Skills';
 import Projects from './layouts/Projects';
 import Profile from './layouts/Profile';
-import Hobby from './layouts/Hobby'; // Import Hobby component
-import Experiences from './layouts/Experiences'; // Import Experiences component
+import Hobby from './layouts/Hobby';
+import Experiences from './layouts/Experiences';
 import Certificates from './layouts/Certificates';
 
 function App() {
   return (
-    <div className='bg-stone-100'>
+    <div className='bg-cod'>
       <Navbar />
       <Home />
-      <Hobby /> {/* Hobby section */}
+      <Hobby />
       <Skills />
       <Certificates />
       <Projects />
-      <Experiences /> {/* Add Experiences component here */}
-      <Profile />
+      <Experiences />
       <Fotter />
     </div>
   );

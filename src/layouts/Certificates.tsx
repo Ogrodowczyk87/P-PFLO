@@ -18,7 +18,7 @@ const certificates = [
 ];
 
 const Certificates = () => (
-  <div id="Certificates" className="py-16 border-t-2 border-dark-blue ">
+  <div id="Certificates" className="py-16 ">
     <div className="container mx-auto px-4 bg-white shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px] ">
       <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
         Certificates

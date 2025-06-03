@@ -5,10 +5,11 @@ import Github from '../assets/Github.svg';
 import tailwind from '../assets/tailwind.svg';
 import linux from '../assets/linux.svg';
 import react from '../assets/react.svg';
+import AI from '../assets/AI.svg';
 
 const Skills = () => {
   return (
-    <div id="Skills" className="bg-cod py-16 border-t-2 border-gray-dark pb-[150px] pt-[80px]">
+    <div id="Skills" className=" py-16  pb-[150px] pt-[80px]">
       <h2 className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue text-center mb-12">
         My Skills
       </h2>
@@ -41,7 +42,7 @@ const Skills = () => {
 
           <button className="profile_item bottom-8 -left-0 absolute rounded-full bg-cover cursor-pointer border border-gray-dark p-[2px] active:scale-95 hover:scale-105 transition-all duration-500">
             <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1">
-              <img className="rounded-full" src={css} alt="CSS" />
+              <img className="rounded-full" src={AI} alt="CSS" />
             </span>
           </button>
 
