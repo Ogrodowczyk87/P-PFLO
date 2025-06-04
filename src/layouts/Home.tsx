@@ -1,13 +1,9 @@
 import Card from '../components/card';
 import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    <div
       id="Home"
       className="  flex items-start justify-center  xl:pl-[110px] xl:pr-[40px] py-10"
     >
@@ -58,7 +54,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

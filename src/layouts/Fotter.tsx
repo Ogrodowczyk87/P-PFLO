@@ -58,7 +58,7 @@ const Footer = () => {
               <h3 className="text-2xl font-poppins font-bold mb-4 text-white">
                 Contact
               </h3>
-              <p className="text-light-gray mb-2">Belfast, UK</p>
+              <p className="text-light-gray mb-2">Belfast, Northern Ireland</p>
               <p className="text-light-gray mb-4">r.ogrodowczyk87@gmail.com</p>
               <div className="flex space-x-4">              
                 <a

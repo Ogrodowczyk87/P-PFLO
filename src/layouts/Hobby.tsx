@@ -3,10 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hobby = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    <div
       id="Hobby"
       className="py-16 flex items-center justify-center"
     >
@@ -32,7 +29,7 @@ const Hobby = () => {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
