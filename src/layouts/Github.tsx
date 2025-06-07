@@ -106,14 +106,11 @@ const Github = () => {
     const contributionWeeks = groupByWeeks(contributionData);
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+        <div
             id="Github"
             className="py-16 px-4 md:px-8"
         >
-            <div className="container mx-auto bg-white/75 shadow-lg rounded-lg p-8 md:p-10">
+            <div className="container mx-auto bg-white/75 shadow-lg rounded-lg p-8 md:p-10 transform transition-transform hover:scale-105 hover:shadow-2xl">
                 {/* Header */}
                 <div className="text-center mb-8">
                     <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mb-4 flex items-center justify-center">
@@ -199,7 +196,7 @@ const Github = () => {
                     </a>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

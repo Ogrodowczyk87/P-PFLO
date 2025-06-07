@@ -7,7 +7,7 @@ const Home = () => {
       id="Home"
       className="  flex items-start justify-center  xl:pl-[110px] xl:pr-[40px] py-10"
     >
-      <div className="container bg-white/75 shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">
+      <div className="container bg-white/75 shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px] transform transition-transform hover:scale-105 hover:shadow-2xl">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2">
             <Card className="shadow-md rounded-lg p-6 bg-light-gray" />

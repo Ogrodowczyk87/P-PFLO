@@ -45,11 +45,7 @@ const Profile = () => {
     <div id="Contact" className="py-16 border-t-2 border-dark-blue">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -200 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
+          <div         
             className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl"
           >
             <div className="flex flex-col items-center">
@@ -65,7 +61,7 @@ const Profile = () => {
                 Feel free to reach out to me for collaboration or inquiries!
               </p>
             </div>
-          </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, x: 100 }}
