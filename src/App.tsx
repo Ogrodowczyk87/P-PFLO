@@ -21,6 +21,7 @@ function App() {
       <Certificates />
       <Projects />
       <Experiences />
+      <Profile />
       <Fotter />
     </div>
   );
