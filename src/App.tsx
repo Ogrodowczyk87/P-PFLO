@@ -8,6 +8,7 @@ import Profile from './layouts/Profile';
 import Hobby from './layouts/Hobby';
 import Experiences from './layouts/Experiences';
 import Certificates from './layouts/Certificates';
+import Github from './layouts/Github'; // Import komponentu GitHub
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Home />
       <Hobby />
       <Skills />
+      <Github />
       <Certificates />
       <Projects />
       <Experiences />
