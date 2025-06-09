@@ -15,12 +15,12 @@ function App() {
     <div className='bg-cod'>
       <Navbar />
       <Home />
-      <Hobby />
       <Skills />
       <Github />
       <Certificates />
       <Projects />
       <Experiences />
+            <Hobby />
       <Profile />
       <Fotter />
     </div>

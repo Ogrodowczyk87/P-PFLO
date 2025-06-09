@@ -115,7 +115,7 @@ const Github = () => {
                 <div className="text-center mb-8">
                     <h2 className="text-3xl md:text-4xl font-bold text-dark-blue mb-4 flex items-center justify-center">
                         <FaGithub className="mr-3" size={36} />
-                        GitHub Contribution Graph
+                        GitHub Contribution
                     </h2>
                     <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                         Visualization of coding activity patterns

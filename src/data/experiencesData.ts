@@ -11,14 +11,14 @@ export const experiences: Experience[] = [
     {
         title: '20.09.2013 - 30.02.2015',
         cardTitle: 'Arla Foods',
-        cardSubtitle: 'Skilled Worker',
+        cardSubtitle: 'Warehouse Operator',
         cardDetailedText: 
             ``,
     },
     {
         title: '1.067-2015 - 30.06.2021',
         cardTitle: 'NFT',
-        cardSubtitle: 'Skilled Worker',
+        cardSubtitle: 'Warehouse Operator',
         cardDetailedText:
             '',
 
@@ -33,7 +33,7 @@ export const experiences: Experience[] = [
     {
         title: '20.09.2022 - Present',
         cardTitle: 'Amazon',
-        cardSubtitle: 'Skilled Worker',
+        cardSubtitle: 'Warehouse Operator',
         cardDetailedText: 'Responsible for fulfillment operations including picking, packing, and dispatching orders. Ensuring proper inventory management with accurate labeling and storage. Maintaining workplace safety standards and contributing to a fast-paced, efficient work environment.',
     },
 ];

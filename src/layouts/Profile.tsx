@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import rafal from '../assets/rafal.jpg';
-import { motion } from 'framer-motion';
 
 const Profile = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -42,7 +41,7 @@ const Profile = () => {
   };
 
   return (
-    <div id="Contact" className="py-16 border-t-2 border-dark-blue">
+    <div id="Contact" className="py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           <div         
@@ -63,12 +62,8 @@ const Profile = () => {
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl"
+          <div          
+                className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl"
           >
             <h3 className="text-2xl font-poppins font-bold text-center text-dark-blue mb-6">
               Contact Me
@@ -125,7 +120,7 @@ const Profile = () => {
                 Send Message
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

@@ -39,7 +39,7 @@ export const Navbar = () => {
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
                                 <a
-                                    className="mky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] "
+                                    className="mky-btn3 relative hover:text-blue-600 py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] "
                                     href={item.link}
                                 >
                                     {item.title}

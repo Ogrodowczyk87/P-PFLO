@@ -1,46 +1,40 @@
-
-const certificates = [
-  {
-    id: 1,
-    title: 'Frontend Developer Certificate',
-    issuer: 'Udemy',
-    date: '2024-01-15',
-    link: 'https://www.udemy.com/certificate/example1'
-  },
-  {
-    id: 2,
-    title: 'React Advanced',
-    issuer: 'Coursera',
-    date: '2023-11-10',
-    link: 'https://www.coursera.org/certificate/example2'
-  }
-];
+import { certificates } from '../data/certyficates';
 
 const Certificates = () => (
-  <div id="Certificates" className="py-16 ">
-    <div className="container mx-auto px-4 bg-white shadow-lg rounded-lg p-8 md:p-10 ">
-      <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
+  <section id="Certificates" className="py-20 bg-gradient-to-br from-blue-50">
+    <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <h2 className="text-5xl font-extrabold text-center text-dark-blue mb-16 font-poppins">
         Certificates
       </h2>
-      <ul className="space-y-6">
+      <ul className="grid gap-10 md:grid-cols-2">
         {certificates.map(cert => (
-          <li key={cert.id} className="bg-light-gray rounded-lg p-6 overflow-hidden transform transition-transform hover:scale-102 hover:shadow-2xl border border-gray">
-            <h3 className="text-xl font-semibold text-dark-blue">{cert.title}</h3>
-            <p className="text-gray-dark">Issued by: {cert.issuer}</p>
-            <p className="text-gray-dark">Date: {cert.date}</p>
+          <li
+            key={cert.id}
+            className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between transform transition-transform hover:scale-105 hover:shadow-2xl border border-blue-200"
+          >
+            <div>
+              <h3 className="text-2xl font-semibold text-dark-blue mb-3">{cert.title}</h3>
+              <p className="text-dark-blue mb-1">
+                <span className="font-medium">Issued by:</span> {cert.issuer}
+              </p>
+              <p className="text-dark-blue flex items-center gap-2 mb-6">
+                <span role="img" aria-label="calendar">📅</span>
+                {(cert.date)}
+              </p>
+            </div>
             <a
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent-yellow hover:text-dark-blue font-medium transition-colors"
+              className="w-full bg-dark-blue text-white font-medium py-3 rounded-lg hover:bg-accent-yellow transition-all text-center inline-block mt-auto"
             >
-              View Certificate
+              🔗 View Certificate
             </a>
           </li>
         ))}
       </ul>
     </div>
-  </div>
+  </section>
 );
 
 export default Certificates;
