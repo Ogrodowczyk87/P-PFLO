@@ -12,7 +12,7 @@ import Github from './layouts/Github'; // Import komponentu GitHub
 
 function App() {
   return (
-    <div className='bg-cod'>
+    <div className="bg-gradient-to-br from-blue-100 via-blue-50 via-white to-yellow-100">
       <Navbar />
       <Home />
       <Skills />
@@ -20,7 +20,7 @@ function App() {
       <Certificates />
       <Projects />
       <Experiences />
-            <Hobby />
+      <Hobby />
       <Profile />
       <Fotter />
     </div>

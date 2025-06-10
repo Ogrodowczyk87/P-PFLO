@@ -1,7 +1,7 @@
 import { certificates } from '../data/certyficates';
 
 const Certificates = () => (
-  <section id="Certificates" className="py-20 bg-gradient-to-br from-blue-50">
+  <section id="Certificates" className="py-20 bg-white">
     <div className="container mx-auto px-6 md:px-12 lg:px-20">
       <h2 className="text-5xl font-extrabold text-center text-dark-blue mb-16 font-poppins">
         Certificates

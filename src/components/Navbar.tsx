@@ -28,9 +28,11 @@ export const Navbar = () => {
     };
 
     return (
-        <div className={`h-[140px] bg-cod border-b-1 sticky  top-0 z-50 ${isSticky ? 'bg-stone-200 shadow-md opacity-90' : ''}`}>
-            <div className='container  mx-auto flex justify-between items-center'>
-                <div className='w-56 p-2 ml-[50px] '>
+        <div
+            className={`h-[140px] sticky backdrop-blur-sm top-0 z-50 ${isSticky ? 'shadow-md' : ''}`}
+        >
+            <div className='container mx-auto flex justify-between items-center h-full'>
+                <div className='w-56 p-2 ml-[50px]'>
                     <img src={logo} alt='logo' className='object-contain' />
                 </div>
 
@@ -39,7 +41,7 @@ export const Navbar = () => {
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
                                 <a
-                                    className="mky-btn3 relative hover:text-blue-600 py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] "
+                                    className="mky-btn3 relative py-2 px-6 after:absolute after:h-1 after:hover:h-[200%]"
                                     href={item.link}
                                 >
                                     {item.title}
@@ -59,7 +61,7 @@ export const Navbar = () => {
 
             {/* Mobile menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-stone-200 shadow-md absolute top-[120px] left-0 w-full z-40">
+                <div className="md:hidden bg-white/90 backdrop-blur-sm shadow-md absolute top-[120px] left-0 w-full z-40">
                     <ul className="flex flex-col text-xl gap-4 font-poppins p-4">
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>

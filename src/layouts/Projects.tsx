@@ -4,17 +4,17 @@ const Projects = () => {
   return (
     <div
       id="Projects"
-      className="py-16 "
+      className="py-16 bg-slate-200"
     >
-      <div className="container mx-auto px-4 bg-white shadow-lg rounded-lg p-8 md:p-10 mt-[60px] mb-[60px]">
-        <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+        <h2 className="text-4xl font-poppins font-bold text-black text-center mb-12">
           My Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <div
               key={project.id}
-              className="bg-cod shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
+              className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl"
             >
               <img
                 src={project.image}

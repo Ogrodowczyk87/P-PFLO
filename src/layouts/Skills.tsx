@@ -9,7 +9,7 @@ import AI from '../assets/AI.svg';
 
 const Skills = () => {
   return (
-    <div id="Skills" className=" py-16  pt-[80px]">
+    <div id="Skills" className=" py-16  pt-[80px] ">
       <h2 className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue text-center mb-12">
         My Skills
       </h2>

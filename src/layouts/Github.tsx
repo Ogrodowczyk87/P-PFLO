@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 
 // Interface for GitHub API data
@@ -108,7 +107,7 @@ const Github = () => {
     return (
         <div
             id="Github"
-            className="py-16 px-4 md:px-8"
+            className="py-16 px-4 md:px-8 bg-white"
         >
             <div className="container mx-auto bg-white/75 shadow-lg rounded-lg p-8 md:p-10 transform transition-transform hover:scale-105 hover:shadow-2xl">
                 {/* Header */}
@@ -117,9 +116,6 @@ const Github = () => {
                         <FaGithub className="mr-3" size={36} />
                         GitHub Contribution
                     </h2>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Visualization of coding activity patterns
-                    </p>
                 </div>
 
                 {loading ? (
