@@ -2,7 +2,7 @@
 
 "use client";
 
-import { type Variants, motion, useAnimationControls } from "motion/react";
+import { type Variants, motion, useAnimationControls } from "framer-motion";
 import React, { useState } from "react";
 
 type PathData = {
