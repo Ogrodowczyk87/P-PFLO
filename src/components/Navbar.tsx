@@ -41,7 +41,7 @@ export const Navbar = () => {
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
                                 <a
-                                    className="mky-btn3 relative py-2 px-6 after:absolute after:h-1 after:hover:h-[200%]"
+                                    className="relative py-2 px-6 text-dark-blue hover:text-accent-yellow transition-colors duration-300"
                                     href={item.link}
                                 >
                                     {item.title}
@@ -53,8 +53,13 @@ export const Navbar = () => {
 
                 {/* Mobile menu toggle button */}
                 <div className='md:hidden mr-[20px]'>
-                    <button onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
-                        {isMobileMenuOpen ? <MdClose className='text-4xl' /> : <MdMenu className='text-4xl' />}
+                    <button
+                        onClick={toggleMobileMenu}
+                        aria-label="Toggle mobile menu"
+                        className="p-2 rounded-lg hover:bg-white/20 hover:scale-110 
+                                 transition-all duration-300 hover:shadow-md backdrop-blur-sm"
+                    >
+                        {isMobileMenuOpen ? <MdClose className='text-4xl hover:text-accent-yellow transition-colors' /> : <MdMenu className='text-4xl hover:text-accent-yellow transition-colors' />}
                     </button>
                 </div>
             </div>

@@ -16,7 +16,7 @@ function App() {
       <Navbar />
       <Home />
       <Skills />
-      <Github />
+      {/* <Github /> */}  {/* temporary rejection component  env file with old token */}
       <Certificates />
       <Projects />
       <Experiences />
