@@ -1,4 +1,5 @@
-import {FaLinkedin, FaGithub} from 'react-icons/fa';
+import { LinkedInIcon } from '../components/LinkedInIcon';
+import { GithubIcon } from '../components/GithubIcon';
 
 const Footer = () => {
   return (
@@ -60,18 +61,18 @@ const Footer = () => {
               </h3>
               <p className="text-light-gray mb-2">Belfast, Northern Ireland</p>
               <p className="text-light-gray mb-4">r.ogrodowczyk87@gmail.com</p>
-              <div className="flex space-x-4">              
+              <div className="flex space-x-4">
                 <a
                   href="https://www.linkedin.com/in/rafal-ogrodowczyk-85648a251/"
                   className="text-light-gray hover:text-accent-yellow transition-colors"
                 >
-                  <FaLinkedin size={24} />
+                  <LinkedInIcon size={24} />
                 </a>
                 <a
                   href="https://github.com/Ogrodowczyk87"
                   className="text-light-gray hover:text-accent-yellow transition-colors"
                 >
-                  <FaGithub size={24} />
+                  <GithubIcon size={24} />
                 </a>
               </div>
             </div>

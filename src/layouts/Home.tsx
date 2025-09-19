@@ -1,6 +1,9 @@
 import Card from '../components/card';
-import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { AnimateSvg } from '../components/AnimateSvg';
+import { InstagramIcon } from '../components/InstagramIcon';
+import { LinkedInIcon } from '../components/LinkedInIcon';
+import { GithubIcon } from '../components/GithubIcon';
+import { MailsIcon } from '../components/MailsIcon';
 
 const Home = () => {
   return (
@@ -27,7 +30,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="text-dark-blue hover:text-accent-yellow transition-colors"
               >
-                <FaInstagram size={24} />
+                <InstagramIcon size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/rafal-ogrodowczyk-85648a251/"
@@ -35,7 +38,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="text-dark-blue hover:text-accent-yellow transition-colors"
               >
-                <FaLinkedin size={24} />
+                <LinkedInIcon size={24} />
               </a>
               <a
                 href="https://github.com/Ogrodowczyk87"
@@ -43,13 +46,13 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="text-dark-blue hover:text-accent-yellow transition-colors"
               >
-                <FaGithub size={24} />
+                <GithubIcon size={24} />
               </a>
               <a
                 href="mailto:r.ogrodowczyk87@gmail.com"
                 className="text-dark-blue hover:text-accent-yellow transition-colors"
               >
-                <FaEnvelope size={24} />
+                <MailsIcon size={24} />
               </a>
             </div>
           </div>
@@ -59,7 +62,7 @@ const Home = () => {
       {/* Animowana strzałka na dole wskazująca na Skills - bardziej na środku */}
       <div className=" absolute bottom-0 left-[60%] transform -translate-x-1/2 translate-y-8 md:translate-y-[48px] lg:translate-y-[50px] flex flex-col items-center">
         {/* Tekst "Check my skills" */}
-     
+
 
         {/* Animowana strzałka */}
         <a href="#Skills" className="cursor-pointer group">
