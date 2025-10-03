@@ -51,22 +51,22 @@ export const projects: Project[] = [
         description:
             'A contact management application built with React and Redux. It allows users to add, edit, and delete contacts, with real-time data synchronization using Firebase.',
     },
-    {
-        id: 5,
-        title: 'Project Five',
-        image: build,
-        github: '',
-        technologies: ['---', '---'],
-        description:
-            'This project is currently under construction. More details will be available soon.',
-    },
-    {
-        id: 6,
-        title: 'Project Six',
-        image: build,
-        github: '',
-        technologies: ['---', '---', '---'],
-        description:
-            'This project is currently under construction. More details will be available soon.',
-    },
+    // {
+    //     id: 5,
+    //     title: 'Project Five',
+    //     image: build,
+    //     github: '',
+    //     technologies: ['---', '---'],
+    //     description:
+    //         'This project is currently under construction. More details will be available soon.',
+    // },
+    // {
+    //     id: 6,
+    //     title: 'Project Six',
+    //     image: build,
+    //     github: '',
+    //     technologies: ['---', '---', '---'],
+    //     description:
+    //         'This project is currently under construction. More details will be available soon.',
+    // },
 ];
