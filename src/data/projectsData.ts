@@ -3,7 +3,8 @@ import SoftwareHouse from '../assets/SoftwareHouse.jpg';
 import IceCream from '../assets/IceCream.webp';
 import FilmWeb from '../assets/FilmWeb.png';
 import phonebook from '../assets/phonebook.png';
-import build from '../assets/build.svg';
+// import build from '../assets/build.svg';
+import BetterShip from '../assets/Bettership.png';
 
 export interface Project {
     id: number;
@@ -51,15 +52,15 @@ export const projects: Project[] = [
         description:
             'A contact management application built with React and Redux. It allows users to add, edit, and delete contacts, with real-time data synchronization using Firebase.',
     },
-    // {
-    //     id: 5,
-    //     title: 'Project Five',
-    //     image: build,
-    //     github: '',
-    //     technologies: ['---', '---'],
-    //     description:
-    //         'This project is currently under construction. More details will be available soon.',
-    // },
+    {
+        id: 5,
+        title: 'Bettership',
+        image: BetterShip,
+        github: 'https://github.com/Ogrodowczyk87/BetterShip.git',
+        technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+        description:
+            'A modern and responsive landing page built with React, TypeScript, and Tailwind CSS. This project demonstrates advanced front-end development skills with clean, maintainable code architecture and beautiful UI design.',
+    },
     // {
     //     id: 6,
     //     title: 'Project Six',
