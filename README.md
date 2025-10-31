@@ -1,54 +1,90 @@
-# React + TypeScript + Vite
+# P-PFLO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+P-PFLO is a modern web application built with React, TypeScript, and TailwindCSS. It is designed to showcase a portfolio, including certificates, experiences, hobbies, projects, and skills. The application is structured to provide a clean and interactive user experience.
 
-Currently, two official plugins are available:
+## Features
+- **Responsive Design**: Ensures compatibility across various devices and screen sizes.
+- **Interactive Animations**: Powered by Framer Motion for smooth transitions and animations.
+- **Dynamic Data**: Displays portfolio data such as certificates, experiences, hobbies, and projects dynamically.
+- **Reusable Components**: Modular and reusable React components for scalability.
+- **TailwindCSS Integration**: Simplifies styling with utility-first CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Frontend**: React, TypeScript
+- **Styling**: TailwindCSS
+- **Animations**: Framer Motion
+- **Build Tool**: Vite
+- **Linting**: ESLint
 
-## Expanding the ESLint configuration
+## Installation
+To set up the project locally, follow these steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ogrodowczyk87/P-PFLO.git
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+2. Navigate to the project directory:
+   ```bash
+   cd P-PFLO
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173`.
+
+## Scripts
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the project for production.
+- `npm run preview`: Previews the production build.
+- `npm run lint`: Runs ESLint to check for code quality.
+- `npm run build:css`: Watches and builds TailwindCSS styles.
+
+## Folder Structure
+```
+P-PFLO/
+├── public/                # Static assets
+├── src/                   # Source code
+│   ├── assets/            # Images and other assets
+│   ├── components/        # Reusable React components
+│   ├── data/              # Static data files
+│   ├── layouts/           # Page layout components
+│   ├── lib/               # Utility functions
+│   ├── types/             # TypeScript type definitions
+│   ├── App.tsx            # Main application component
+│   ├── main.tsx           # Application entry point
+│   └── index.css          # Global styles
+├── package.json           # Project metadata and scripts
+├── tailwind.config.js     # TailwindCSS configuration
+├── vite.config.ts         # Vite configuration
+└── tsconfig.json          # TypeScript configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Dependencies
+### Main Dependencies
+- **React**: A JavaScript library for building user interfaces.
+- **TailwindCSS**: A utility-first CSS framework.
+- **Framer Motion**: A library for animations and gestures.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Dev Dependencies
+- **TypeScript**: A strongly typed programming language.
+- **Vite**: A fast build tool for modern web projects.
+- **ESLint**: A tool for identifying and fixing code quality issues.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Contributing
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Author
+Developed by [Ogrodowczyk87](https://github.com/Ogrodowczyk87).

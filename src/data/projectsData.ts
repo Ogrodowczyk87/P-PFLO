@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/image';
+// import { StaticImageData } from 'next/image';
 import SoftwareHouse from '../assets/SoftwareHouse.jpg';
 import IceCream from '../assets/IceCream.webp';
 import FilmWeb from '../assets/FilmWeb.png';
