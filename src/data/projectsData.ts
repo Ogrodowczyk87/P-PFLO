@@ -4,7 +4,7 @@ import IceCream from '../assets/IceCream.webp';
 import FilmWeb from '../assets/FilmWeb.png';
 import phonebook from '../assets/phonebook.png';
 // import build from '../assets/build.svg';
-import BetterShip from '../assets/Bettership.png';
+import BetterShip from '../assets/BetterShip.png';
 
 export interface Project {
     id: number;
