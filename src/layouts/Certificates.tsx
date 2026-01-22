@@ -10,25 +10,24 @@ const Certificates = () => (
         {certificates.map(cert => (
           <li
             key={cert.id}
-            className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-between transform transition-transform hover:scale-105 hover:shadow-2xl border border-blue-200"
+            className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col justify-between transition-shadow hover:shadow-lg"
           >
             <div>
               <h3 className="text-2xl font-semibold text-dark-blue mb-3">{cert.title}</h3>
-              <p className="text-dark-blue mb-1">
+              <p className="text-slate-700 mb-1">
                 <span className="font-medium">Issued by:</span> {cert.issuer}
               </p>
-              <p className="text-dark-blue flex items-center gap-2 mb-6">
-                <span role="img" aria-label="calendar">📅</span>
-                {(cert.date)}
+              <p className="text-slate-600 mb-6">
+                <span className="font-medium">Date:</span> {cert.date}
               </p>
             </div>
             <a
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-dark-blue text-white font-medium py-3 rounded-lg hover:bg-accent-yellow transition-all text-center inline-block mt-auto"
+              className="w-full bg-dark-blue text-white font-medium py-3 rounded-lg hover:bg-accent-yellow transition-colors text-center inline-block mt-auto"
             >
-              🔗 View Certificate
+              View Certificate
             </a>
           </li>
         ))}

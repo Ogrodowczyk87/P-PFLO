@@ -29,7 +29,7 @@ export const Navbar = () => {
 
     return (
         <div
-            className={`h-[140px] sticky backdrop-blur-sm top-0 z-50 ${isSticky ? 'shadow-md' : ''}`}
+            className={`h-[120px] sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200 ${isSticky ? 'shadow-sm' : ''}`}
         >
             <div className='container mx-auto flex justify-between items-center h-full'>
                 <div className='w-56 p-2 ml-[50px]'>
@@ -41,7 +41,7 @@ export const Navbar = () => {
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
                                 <a
-                                    className="relative py-2 px-6 text-dark-blue hover:text-accent-yellow transition-colors duration-300"
+                                    className="relative py-2 px-6 text-slate-800 hover:text-accent-yellow transition-colors duration-300"
                                     href={item.link}
                                 >
                                     {item.title}
@@ -56,22 +56,21 @@ export const Navbar = () => {
                     <button
                         onClick={toggleMobileMenu}
                         aria-label="Toggle mobile menu"
-                        className="p-2 rounded-lg hover:bg-white/20 hover:scale-110 
-                                 transition-all duration-300 hover:shadow-md backdrop-blur-sm"
+                        className="p-2 rounded-lg hover:bg-slate-100 transition-colors duration-300"
                     >
-                        {isMobileMenuOpen ? <MdClose className='text-4xl hover:text-accent-yellow transition-colors' /> : <MdMenu className='text-4xl hover:text-accent-yellow transition-colors' />}
+                        {isMobileMenuOpen ? <MdClose className='text-4xl text-slate-700 hover:text-accent-yellow transition-colors' /> : <MdMenu className='text-4xl text-slate-700 hover:text-accent-yellow transition-colors' />}
                     </button>
                 </div>
             </div>
 
             {/* Mobile menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-white/90 backdrop-blur-sm shadow-md absolute top-[120px] left-0 w-full z-40">
+                <div className="md:hidden bg-white/95 backdrop-blur-sm shadow-sm absolute top-[120px] left-0 w-full z-40 border-t border-slate-200">
                     <ul className="flex flex-col text-xl gap-4 font-poppins p-4">
                         {navbarItems.map((item: NavbarType) => (
                             <li key={item.id}>
                                 <a
-                                    className="block py-2 px-4 text-dark-blue hover:bg-blue-500 hover:text-white rounded transition-colors"
+                                    className="block py-2 px-4 text-slate-800 hover:bg-slate-100 rounded transition-colors"
                                     href={item.link}
                                     onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
                                 >

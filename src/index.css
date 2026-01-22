@@ -7,29 +7,11 @@ body {
 }
 
 @theme {
-  --color-background:  #49a9e9;
-  --color-black: #1E1E2F;
-  --color-dark-blue: #000000;
-  --color-accent-yellow: #F39C12;
-  --color-light-beige: #FDF6EC;
   --color-white: #FFFFFF;
-  --color-warm-orange: #FF6F3C;
-  --color-soft-pink: #FAD4D8;
-  --color-light-blue: #A7C5EB;
-  --color-dark-red: #D72638;
-  --color-teal: #008080;
-  --color-cod: #F7F9FB;
-  --color-accent: #10b981;
-  --color-accent-foreground: #ffffff;
-  --color-muted: #6b7280;
-  --color-muted-foreground: #f3f4f6;
-  --color-custom: linear-gradient(90deg,
-      rgba(114, 106, 138, 1) 0%,
-      rgba(9, 9, 121, 1) 35%,
-      rgba(7, 50, 148, 1) 48%,
-      rgba(4, 111, 188, 1) 68%,
-      rgba(0, 212, 255, 1) 87%,
-      rgba(1, 191, 241, 1) 93%);
+  --color-dark-blue: #0F172A;
+  --color-accent-yellow: #2563EB;
+  --color-light-gray: #E5E7EB;
+  --color-cod: #F8FAFC;
 
   --font-roboto: 'Roboto', sans-serif;
   --font-open-sans: 'Open Sans', sans-serif;
@@ -42,33 +24,4 @@ body {
   --screen-lg: 1024px;
   --screen-xl: 1280px;
   --screen-2xl: 1536px;
-}
-
-/* Background color */
-.bg-navbar-sticky {
-  background-color: var(--color-background);
-}
-
-.bg-navbar-default {
-  background-color: var(--color-light-beige);
-}
-
-/* Gradient */
-.bg-custom-gradient {
-  background: var(--color-custom);
-  background-size: cover;
-}
-
-/* Color text */
-.text-primary {
-  color: var(--color-dark-blue);
-}
-
-.text-secondary {
-  color: var(--color-light-blue);
-}
-
-/* styles.css */
-.gradient-bg {
-  background: linear-gradient(27deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }

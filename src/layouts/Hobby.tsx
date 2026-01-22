@@ -1,13 +1,10 @@
 import { hobbies } from '../data/hobbiesData.tsx';
 
 const Hobby = () => {
-  console.log('Hobbies data:', hobbies);
-  console.log('Number of hobbies:', hobbies.length);
-
   return (
     <div
       id="Hobby"
-      className="py-16 flex items-center justify-center bg-slate-200"
+      className="py-16 flex items-center justify-center bg-slate-50"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
@@ -17,13 +14,13 @@ const Hobby = () => {
           {hobbies.map((hobby) => (
             <div
               key={hobby.id}
-              className="bg-white shadow-lg rounded-lg p-6 text-center transform transition-transform hover:scale-105 hover:shadow-2xl w-full max-w-sm"
+              className="bg-white border border-slate-200 shadow-sm rounded-xl p-6 text-center transition-shadow hover:shadow-lg w-full max-w-sm"
             >
               <div className="text-5xl mb-4">{hobby.icon}</div>
               <h3 className="text-xl font-semibold text-dark-blue mb-2">
                 {hobby.title}
               </h3>
-              <p className="text-dark-blue">{hobby.description}</p>
+              <p className="text-slate-700">{hobby.description}</p>
             </div>
           ))}
         </div>

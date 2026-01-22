@@ -21,11 +21,12 @@ const Experiences = () => {
                         showAllCardsHorizontal={false}
                         enableOutline={false}
                         theme={{
-                            primary: '#2C3E50',
-                            secondary: '#F39C12',
+                            primary: '#0F172A',
+                            secondary: '#2563EB',
                             cardBgColor: '#FFFFFF',
-                            cardForeColor: '#2C3E50',
-                            titleColor: '#F39C12',
+                            cardForeColor: '#0F172A',
+                            titleColor: '#2563EB',
+                            titleColorActive: '#FFFFFF',
                         }}
                     />
                 </div>

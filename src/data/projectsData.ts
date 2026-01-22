@@ -5,6 +5,7 @@ import FilmWeb from '../assets/FilmWeb.png';
 import phonebook from '../assets/phonebook.png';
 // import build from '../assets/build.svg';
 import BetterShip from '../assets/BetterShip.png';
+import NEUROFORAGE from '../assets/NEUROFORAGE.png';
 
 export interface Project {
     id: number;
@@ -61,13 +62,13 @@ export const projects: Project[] = [
         description:
             'A modern and responsive landing page built with React, TypeScript, and Tailwind CSS. This project demonstrates advanced front-end development skills with clean, maintainable code architecture and beautiful UI design.',
     },
-    // {
-    //     id: 6,
-    //     title: 'Project Six',
-    //     image: build,
-    //     github: '',
-    //     technologies: ['---', '---', '---'],
-    //     description:
-    //         'This project is currently under construction. More details will be available soon.',
-    // },
+    {
+        id: 6,
+        title: 'NEUROFORAGE',
+        image: NEUROFORAGE,
+        github: '',
+        technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Supabase'],
+        description:
+            'ProcesoryPanel is a full-featured web application that includes a secure login flow, a post‑login dashboard with project tracking (stages, milestones, budgets), and a shopping cart experience to demonstrate e‑commerce logic and UI state management. The app focuses on clean, responsive UI, reusable components, and clear data presentation, showing my ability to build modern, scalable front‑end experiences.',
+    },
 ];

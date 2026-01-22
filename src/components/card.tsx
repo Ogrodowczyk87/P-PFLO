@@ -1,9 +1,14 @@
 
-const Card = () => {
+type CardProps = {
+  className?: string;
+};
+
+const Card = ({ className }: CardProps) => {
   return (
-    <div className="card group relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-2xl text-white font-mono text-sm flex flex-col gap-2 w-fit px-8 py-8 shadow-2xl border border-gray-700 hover:border-blue-500 transition-all duration-500 hover:scale-105 hover:shadow-blue-500/20 backdrop-blur-sm">
-      {/* Glow effect */}
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500 -z-10"></div>
+    <div
+      className={`card group relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl text-slate-100 font-mono text-sm flex flex-col gap-2 w-full px-8 py-8 shadow-xl border border-slate-700/60 hover:border-blue-500/70 hover:shadow-blue-500/20 hover:scale-[1.01] transition-all duration-300 ${className ?? ''}`}
+    >
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/60 to-slate-700/10 rounded-2xl blur opacity-0 group-hover:opacity-35 transition duration-300 -z-10"></div>
 
       <div className="line flex gap-4 hover:bg-gray-800/30 rounded-md px-2 py-1 transition-colors duration-200">
         <p className="number text-gray-400 w-6 text-right font-semibold select-none">1</p>

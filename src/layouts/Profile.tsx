@@ -9,7 +9,7 @@ const Profile = () => {
     message: ''
   });
 
-  useEffect(() => {
+    useEffect(() => {
     emailjs.init('8YqCDLsr_FXl4g2Ey');
   }, []);
 
@@ -41,29 +41,30 @@ const Profile = () => {
   };
 
   return (
-    <div id="Contact" className="py-16 bg-slate-200">
+    <div id="Contact" className="py-16 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-          <div         
-            className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl"
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">
+          <div
+            className="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden p-8 transition-shadow hover:shadow-lg"
           >
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center text-center">
               <img
                 src={rafal}
                 alt="Profile"
-                className="w-32 h-32 rounded-full mb-4 md:w-40 md:h-40 xl:w-48 xl:h-48 mt-8 shadow-md"
+                className="w-32 h-32 rounded-full mb-6 md:w-40 md:h-40 xl:w-48 xl:h-48 mt-6 ring-4 ring-white shadow-md"
               />
-              <h3 className="text-4xl font-poppins font-bold text-dark-blue">
+              <h3 className="text-3xl md:text-4xl font-poppins font-bold text-dark-blue">
                 Rafal Ogrodowczyk
               </h3>
-              <p className="text-black text-center text-lg md:text-xl mt-5">
-                Feel free to reach out to me for collaboration or inquiries!
+              <p className="text-slate-700 text-lg md:text-xl mt-4 max-w-md">
+                Feel free to reach out to me for collaboration or inquiries.
               </p>
+              <div className="mt-6 w-16 h-1 rounded-full bg-accent-yellow"></div>
             </div>
           </div>
 
-          <div          
-                className="bg-white shadow-lg rounded-lg overflow-hidden p-8 transform transition-transform hover:scale-105 hover:shadow-2xl"
+          <div
+            className="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden p-8 transition-shadow hover:shadow-lg"
           >
             <h3 className="text-2xl font-poppins font-bold text-center text-dark-blue mb-6">
               Contact Me
@@ -73,41 +74,41 @@ const Profile = () => {
                 {status.message}
               </div>
             )}
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
               <div>
-                <label htmlFor="user_name" className="block text-dark-blue font-medium">
+                <label htmlFor="user_name" className="block text-dark-blue font-medium mb-2">
                   Name
                 </label>
                 <input
                   type="text"
                   name="user_name"
                   id="user_name"
-                  className="w-full border border-light-gray rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-accent-yellow"
+                  className="w-full border border-light-gray rounded-lg p-3 bg-slate-50 focus:outline-none focus:border-accent-yellow focus:ring-2 focus:ring-accent-yellow"
                   placeholder="Your Name"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="user_email" className="block text-dark-blue font-medium">
+                <label htmlFor="user_email" className="block text-dark-blue font-medium mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   name="user_email"
                   id="user_email"
-                  className="w-full border border-light-gray rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-accent-yellow"
+                  className="w-full border border-light-gray rounded-lg p-3 bg-slate-50 focus:outline-none focus:border-accent-yellow focus:ring-2 focus:ring-accent-yellow"
                   placeholder="Your Email"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-dark-blue font-medium">
+                <label htmlFor="message" className="block text-dark-blue font-medium mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full border border-light-gray rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-accent-yellow"
+                  className="w-full border border-light-gray rounded-lg p-3 bg-slate-50 focus:outline-none focus:border-accent-yellow focus:ring-2 focus:ring-accent-yellow"
                   placeholder="Your Message"
                   rows={4}
                   required
@@ -115,7 +116,7 @@ const Profile = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-dark-blue text-white font-medium py-3 rounded-lg hover:bg-accent-yellow transition-all"
+                className="w-full bg-dark-blue text-white font-medium py-3 rounded-lg hover:bg-accent-yellow transition-colors"
               >
                 Send Message
               </button>
