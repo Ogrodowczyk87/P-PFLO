@@ -1,20 +1,20 @@
 "use client";
 
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import type { HTMLMotionProps, Variants } from "motion/react";
 import { motion, useAnimation, useReducedMotion } from "motion/react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
-export interface SwordsIconHandle {
+export interface LinkedInIconHandle {
     startAnimation: () => void;
     stopAnimation: () => void;
 }
 
-interface SwordsIconProps extends HTMLMotionProps<"div"> {
+interface LinkedInIconProps extends HTMLMotionProps<"div"> {
     size?: number;
 }
 
-const SwordsIcon = forwardRef<SwordsIconHandle, SwordsIconProps>(
+const LinkedInIcon = forwardRef<LinkedInIconHandle, LinkedInIconProps>(
     ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
         const controls = useAnimation();
         const reduced = useReducedMotion();
@@ -46,21 +46,21 @@ const SwordsIcon = forwardRef<SwordsIconHandle, SwordsIconProps>(
             [controls, onMouseLeave],
         );
 
-        const svgVariants: Variants = {
-            normal: { rotate: 0, scale: 1 },
+        const iconVariants: Variants = {
+            normal: { scale: 1, rotate: 0 },
             animate: {
-                rotate: [0, -5, 5, -3, 3, 0],
-                scale: [1, 1.05, 0.95, 1],
-                transition: { duration: 1.5, ease: "easeInOut", repeat: 0 },
+                scale: [1, 1.08, 0.95, 1],
+                rotate: [0, -3, 3, 0],
+                transition: { duration: 1.3, ease: "easeInOut", repeat: 0 },
             },
         };
 
-        const pathVariants: Variants = {
+        const drawVariants: Variants = {
             normal: { pathLength: 1, opacity: 1 },
             animate: {
                 pathLength: [0, 1],
-                opacity: [0.6, 1],
-                transition: { duration: 1.2, ease: "easeInOut", repeat: 0 },
+                opacity: [0.7, 1],
+                transition: { duration: 1.5, ease: "easeInOut", repeat: 0 },
             },
         };
 
@@ -83,45 +83,28 @@ const SwordsIcon = forwardRef<SwordsIconHandle, SwordsIconProps>(
                     strokeLinejoin="round"
                     animate={controls}
                     initial="normal"
-                    variants={svgVariants}
+                    variants={iconVariants}
                 >
-                    <motion.polyline
-                        points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"
-                        variants={pathVariants}
+                    <motion.path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7
+              a2 2 0 0 0-2-2 
+              2 2 0 0 0-2 2v7h-4v-7
+              a6 6 0 0 1 6-6z"
+                        variants={drawVariants}
                     />
-                    <motion.line
-                        x1="13"
-                        x2="19"
-                        y1="19"
-                        y2="13"
-                        variants={pathVariants}
+                    <motion.rect
+                        width="4"
+                        height="12"
+                        x="2"
+                        y="9"
+                        variants={drawVariants}
                     />
-                    <motion.line
-                        x1="16"
-                        x2="20"
-                        y1="16"
-                        y2="20"
-                        variants={pathVariants}
-                    />
-                    <motion.line
-                        x1="19"
-                        x2="21"
-                        y1="21"
-                        y2="19"
-                        variants={pathVariants}
-                    />
-                    <motion.polyline
-                        points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"
-                        variants={pathVariants}
-                    />
-                    <motion.line x1="5" x2="9" y1="14" y2="18" variants={pathVariants} />
-                    <motion.line x1="7" x2="4" y1="17" y2="20" variants={pathVariants} />
-                    <motion.line x1="3" x2="5" y1="19" y2="21" variants={pathVariants} />
+                    <motion.circle cx="4" cy="4" r="2" variants={drawVariants} />
                 </motion.svg>
             </motion.div>
         );
     },
 );
 
-SwordsIcon.displayName = "SwordsIcon";
-export { SwordsIcon };
+LinkedInIcon.displayName = "LinkedInIcon";
+export { LinkedInIcon };

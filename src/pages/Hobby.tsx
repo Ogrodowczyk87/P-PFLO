@@ -1,4 +1,4 @@
-import { hobbies } from '../data/hobbiesData.tsx';
+import { hobbies } from '../content/hobbies';
 
 const Hobby = () => {
   return (

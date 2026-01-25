@@ -1,5 +1,5 @@
 import { Chrono } from 'react-chrono';
-import { experiences } from '../data/experiencesData';
+import { experiences } from '../content/experiences';
 
 const Experiences = () => {
     return (

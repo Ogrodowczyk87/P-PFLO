@@ -1,4 +1,4 @@
-import { certificates } from '../data/certyficates';
+import { certificates } from '../content/certificates';
 
 const Certificates = () => (
   <section id="Certificates" className="py-20 bg-white">

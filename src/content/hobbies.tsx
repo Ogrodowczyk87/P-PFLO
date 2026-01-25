@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
-import { ActivityIcon } from '../components/ActivityIcon';
-import { AudioLinesIcon } from '../components/AudioLinesIcon';
-import { BookOpenCheckIcon } from '../components/BookOpenCheckIcon';
-import { TelescopeIcon } from '../components/TelescopeIcon';
-import { SwordsIcon } from '../components/SwordsIcon';
+import { ActivityIcon } from '../components/icons/ActivityIcon';
+import { AudioLinesIcon } from '../components/icons/AudioLinesIcon';
+import { BookOpenCheckIcon } from '../components/icons/BookOpenCheckIcon';
+import { TelescopeIcon } from '../components/icons/TelescopeIcon';
+import { SwordsIcon } from '../components/icons/SwordsIcon';
 
 export interface HobbyItem {
     id: number;

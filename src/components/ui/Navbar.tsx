@@ -1,8 +1,8 @@
-import { NavbarType } from '../types/types';
+import { NavbarType } from '../../types/types';
 import { MdMenu, MdClose } from 'react-icons/md';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 import { useEffect, useState } from 'react';
-import { navbarItems } from '../data/navbarData';
+import { navbarItems } from '../../content/navbar';
 
 export const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);

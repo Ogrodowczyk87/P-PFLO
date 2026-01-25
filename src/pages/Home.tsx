@@ -1,9 +1,9 @@
-import Card from '../components/card';
-import { AnimateSvg } from '../components/AnimateSvg';
-import { InstagramIcon } from '../components/InstagramIcon';
-import { LinkedInIcon } from '../components/LinkedInIcon';
-import { GithubIcon } from '../components/GithubIcon';
-import { MailsIcon } from '../components/MailsIcon';
+import Card from '../components/ui/Card';
+import { AnimateSvg } from '../components/ui/AnimateSvg';
+import { InstagramIcon } from '../components/icons/InstagramIcon';
+import { LinkedInIcon } from '../components/icons/LinkedInIcon';
+import { GithubIcon } from '../components/icons/GithubIcon';
+import { MailsIcon } from '../components/icons/MailsIcon';
 
 const Home = () => {
   return (

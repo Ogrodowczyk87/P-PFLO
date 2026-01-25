@@ -1,20 +1,20 @@
 "use client";
 
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import type { HTMLMotionProps, Variants } from "motion/react";
 import { motion, useAnimation, useReducedMotion } from "motion/react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
-export interface MailsIconHandle {
+export interface SwordsIconHandle {
     startAnimation: () => void;
     stopAnimation: () => void;
 }
 
-interface MailsIconProps extends HTMLMotionProps<"div"> {
+interface SwordsIconProps extends HTMLMotionProps<"div"> {
     size?: number;
 }
 
-const MailsIcon = forwardRef<MailsIconHandle, MailsIconProps>(
+const SwordsIcon = forwardRef<SwordsIconHandle, SwordsIconProps>(
     ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
         const controls = useAnimation();
         const reduced = useReducedMotion();
@@ -47,40 +47,20 @@ const MailsIcon = forwardRef<MailsIconHandle, MailsIconProps>(
         );
 
         const svgVariants: Variants = {
-            normal: { y: 0, scale: 1 },
+            normal: { rotate: 0, scale: 1 },
             animate: {
-                y: [0, -3, 3, -2, 0],
+                rotate: [0, -5, 5, -3, 3, 0],
                 scale: [1, 1.05, 0.95, 1],
-                transition: {
-                    duration: 1.6,
-                    ease: [0.42, 0, 0.58, 1],
-                    repeat: 0,
-                },
+                transition: { duration: 1.5, ease: "easeInOut", repeat: 0 },
             },
         };
 
-        const flapVariants: Variants = {
-            normal: { rotate: 0, opacity: 1 },
+        const pathVariants: Variants = {
+            normal: { pathLength: 1, opacity: 1 },
             animate: {
-                rotate: [-4, 4, -3, 0],
-                opacity: [1, 0.7, 1],
-                transition: {
-                    duration: 1.2,
-                    ease: [0.42, 0, 0.58, 1],
-                    repeat: 0,
-                },
-            },
-        };
-
-        const outlineVariants: Variants = {
-            normal: { opacity: 1 },
-            animate: {
-                opacity: [0.7, 1, 0.5, 1],
-                transition: {
-                    duration: 1.4,
-                    ease: [0.42, 0, 0.58, 1],
-                    repeat: 0,
-                },
+                pathLength: [0, 1],
+                opacity: [0.6, 1],
+                transition: { duration: 1.2, ease: "easeInOut", repeat: 0 },
             },
         };
 
@@ -105,27 +85,43 @@ const MailsIcon = forwardRef<MailsIconHandle, MailsIconProps>(
                     initial="normal"
                     variants={svgVariants}
                 >
-                    <motion.path
-                        d="M17 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 1-1.732"
-                        variants={outlineVariants}
+                    <motion.polyline
+                        points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"
+                        variants={pathVariants}
                     />
-                    <motion.path
-                        d="m22 5.5-6.419 4.179a2 2 0 0 1-2.162 0L7 5.5"
-                        variants={flapVariants}
+                    <motion.line
+                        x1="13"
+                        x2="19"
+                        y1="19"
+                        y2="13"
+                        variants={pathVariants}
                     />
-                    <motion.rect
-                        x="7"
-                        y="3"
-                        width="15"
-                        height="12"
-                        rx="2"
-                        variants={outlineVariants}
+                    <motion.line
+                        x1="16"
+                        x2="20"
+                        y1="16"
+                        y2="20"
+                        variants={pathVariants}
                     />
+                    <motion.line
+                        x1="19"
+                        x2="21"
+                        y1="21"
+                        y2="19"
+                        variants={pathVariants}
+                    />
+                    <motion.polyline
+                        points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"
+                        variants={pathVariants}
+                    />
+                    <motion.line x1="5" x2="9" y1="14" y2="18" variants={pathVariants} />
+                    <motion.line x1="7" x2="4" y1="17" y2="20" variants={pathVariants} />
+                    <motion.line x1="3" x2="5" y1="19" y2="21" variants={pathVariants} />
                 </motion.svg>
             </motion.div>
         );
     },
 );
 
-MailsIcon.displayName = "MailsIcon";
-export { MailsIcon };
+SwordsIcon.displayName = "SwordsIcon";
+export { SwordsIcon };

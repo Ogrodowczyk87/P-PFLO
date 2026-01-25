@@ -1,20 +1,20 @@
 "use client";
 
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import type { HTMLMotionProps, Variants } from "motion/react";
 import { motion, useAnimation, useReducedMotion } from "motion/react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
-export interface ActivityIconHandle {
+export interface AudioLinesIconHandle {
     startAnimation: () => void;
     stopAnimation: () => void;
 }
 
-interface ActivityIconProps extends HTMLMotionProps<"div"> {
+interface AudioLinesIconProps extends HTMLMotionProps<"div"> {
     size?: number;
 }
 
-const ActivityIcon = forwardRef<ActivityIconHandle, ActivityIconProps>(
+const AudioLinesIcon = forwardRef<AudioLinesIconHandle, AudioLinesIconProps>(
     ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
         const controls = useAnimation();
         const reduced = useReducedMotion();
@@ -49,19 +49,28 @@ const ActivityIcon = forwardRef<ActivityIconHandle, ActivityIconProps>(
             [controls, onMouseLeave],
         );
 
-        const activityVariants: Variants = {
-            normal: { strokeDasharray: "none", opacity: 1 },
-            animate: {
-                strokeDasharray: "80 80",
-                strokeDashoffset: [80, 0, -80],
-                opacity: [0.6, 1, 0.6],
+        const barVariants: Variants = {
+            normal: { scaleY: 1, opacity: 1 },
+            animate: (i: number) => ({
+                scaleY: [1, 1.4, 0.6, 1],
+                opacity: [1, 0.8, 1],
                 transition: {
-                    duration: 1,
-                    repeat: Infinity,
+                    duration: 0.9,
+                    repeat: 0,
+                    delay: i * 0.2,
                     ease: "easeInOut",
                 },
-            },
+            }),
         };
+
+        const paths = [
+            "M2 10v3",
+            "M6 6v11",
+            "M10 3v18",
+            "M14 8v7",
+            "M18 5v13",
+            "M22 10v3",
+        ];
 
         return (
             <motion.div
@@ -83,15 +92,20 @@ const ActivityIcon = forwardRef<ActivityIconHandle, ActivityIconProps>(
                     animate={controls}
                     initial="normal"
                 >
-                    <motion.path
-                        d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"
-                        variants={activityVariants}
-                    />
+                    {paths.map((d, i) => (
+                        <motion.path
+                            key={i}
+                            d={d}
+                            variants={barVariants}
+                            custom={i}
+                            style={{ originY: 0.5 }}
+                        />
+                    ))}
                 </motion.svg>
             </motion.div>
         );
     },
 );
 
-ActivityIcon.displayName = "ActivityIcon";
-export { ActivityIcon };
+AudioLinesIcon.displayName = "AudioLinesIcon";
+export { AudioLinesIcon };

@@ -1,20 +1,20 @@
 "use client";
 
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import type { HTMLMotionProps, Variants } from "motion/react";
 import { motion, useAnimation, useReducedMotion } from "motion/react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
-export interface InstagramIconHandle {
+export interface ActivityIconHandle {
     startAnimation: () => void;
     stopAnimation: () => void;
 }
 
-interface InstagramIconProps extends HTMLMotionProps<"div"> {
+interface ActivityIconProps extends HTMLMotionProps<"div"> {
     size?: number;
 }
 
-const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
+const ActivityIcon = forwardRef<ActivityIconHandle, ActivityIconProps>(
     ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
         const controls = useAnimation();
         const reduced = useReducedMotion();
@@ -39,37 +39,27 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
         );
 
         const handleLeave = useCallback(
-            (e?: React.MouseEvent<HTMLDivElement>) => {
-                if (!isControlled.current) controls.start("normal");
-                else onMouseLeave?.(e as any);
+            (e: React.MouseEvent<HTMLDivElement>) => {
+                if (!isControlled.current) {
+                    controls.start("normal");
+                } else {
+                    onMouseLeave?.(e as any);
+                }
             },
             [controls, onMouseLeave],
         );
 
-        const iconVariants: Variants = {
-            normal: { scale: 1, rotate: 0 },
+        const activityVariants: Variants = {
+            normal: { strokeDasharray: "none", opacity: 1 },
             animate: {
-                scale: [1, 1.08, 0.95, 1],
-                rotate: [0, -2, 2, 0],
-                transition: { duration: 1.3, ease: "easeInOut", repeat: 0 },
-            },
-        };
-
-        const drawVariants: Variants = {
-            normal: { pathLength: 1, opacity: 1 },
-            animate: {
-                pathLength: [0, 1],
-                opacity: [0.7, 1],
-                transition: { duration: 1.5, ease: "easeInOut", repeat: 0 },
-            },
-        };
-
-        const pulseVariants: Variants = {
-            normal: { scale: 1, opacity: 1 },
-            animate: {
-                scale: [1, 1.4, 1],
-                opacity: [1, 0.4, 1],
-                transition: { duration: 1, repeat: 0, ease: "easeInOut" },
+                strokeDasharray: "80 80",
+                strokeDashoffset: [80, 0, -80],
+                opacity: [0.6, 1, 0.6],
+                transition: {
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                },
             },
         };
 
@@ -92,27 +82,10 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
                     strokeLinejoin="round"
                     animate={controls}
                     initial="normal"
-                    variants={iconVariants}
                 >
-                    <motion.rect
-                        width="20"
-                        height="20"
-                        x="2"
-                        y="2"
-                        rx="5"
-                        ry="5"
-                        variants={drawVariants}
-                    />
                     <motion.path
-                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                        variants={drawVariants}
-                    />
-                    <motion.line
-                        x1="17.5"
-                        x2="17.51"
-                        y1="6.5"
-                        y2="6.5"
-                        variants={pulseVariants}
+                        d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"
+                        variants={activityVariants}
                     />
                 </motion.svg>
             </motion.div>
@@ -120,5 +93,5 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
     },
 );
 
-InstagramIcon.displayName = "InstagramIcon";
-export { InstagramIcon };
+ActivityIcon.displayName = "ActivityIcon";
+export { ActivityIcon };
