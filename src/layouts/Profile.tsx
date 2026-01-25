@@ -9,21 +9,35 @@ const Profile = () => {
     message: ''
   });
 
-    useEffect(() => {
-    emailjs.init('8YqCDLsr_FXl4g2Ey');
-  }, []);
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+
+  useEffect(() => {
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, [publicKey]);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setStatus({ submitted: true, message: 'Sending...' });
 
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        submitted: true,
+        message: 'Email service is not configured. Please try again later.'
+      });
+      return;
+    }
+
     if (form.current) {
       emailjs.sendForm(
-        'service_n94uv5g',
-        'template_ivty839',
+        serviceId,
+        templateId,
         form.current,
-        '8YqCDLsr_FXl4g2Ey'  
+        publicKey
       )
         .then(() => {
           setStatus({
