@@ -1,9 +1,12 @@
+import Fire from '../assets/fire.gif';
+
 export interface Certificate {
   id: number;
   title: string;
   issuer: string;
   date: string;
   link: string;
+  image?: string;
 }
 
 export const certificates: Certificate[] = [
@@ -18,7 +21,15 @@ export const certificates: Certificate[] = [
     id: 2,
     title: 'TS course in progress',
     issuer: 'Coursera',
-    date: 'currently in progress',
+    date: '--',
     link: '#'
+  },
+  {
+    id: 3,
+    title: 'Cloud Support Specialist',
+    issuer: 'CorelationOne',
+    date: 'currently in progress',
+    link: '#',
+    image: Fire
   }
 ];

@@ -1,6 +1,5 @@
-import JavaScript from '../assets/JavaScript.svg';
 import TypeScript from '../assets/TypeScript.svg';
-import css from '../assets/css.svg';
+import AWS from '../assets/AWS.svg'
 import Github from '../assets/Github.svg';
 import tailwind from '../assets/tailwind.svg';
 import linux from '../assets/linux.svg';
@@ -38,8 +37,8 @@ const Skills = () => {
           </button>
 
           <button className="profile_item -right-4 top-20 absolute rounded-full bg-cover cursor-pointer border border-slate-300 p-[2px] active:scale-95 hover:scale-105 transition-all duration-300">
-            <span className="block w-[40px] h-[40px] rounded-full z-[2] bg-blue-50 p-1">
-              <img className="rounded-full" src={JavaScript} alt="JavaScript" />
+            <span className="flex items-center justify-center w-[40px] h-[40px] rounded-full z-[2] bg-blue-50 p-1">
+              <img className="block w-full h-full object-contain object-center" src={AWS} alt="AWS" />
             </span>
           </button>
 

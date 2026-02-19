@@ -6,13 +6,21 @@ const Certificates = () => (
       <h2 className="text-5xl font-extrabold text-center text-dark-blue mb-16 font-poppins">
         Certificates
       </h2>
-      <ul className="grid gap-10 md:grid-cols-2">
+      <ul className="grid gap-10 md:grid-cols-2 items-stretch">
         {certificates.map(cert => (
           <li
             key={cert.id}
-            className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col justify-between transition-shadow hover:shadow-lg"
+            className="relative h-full min-h-[320px] bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col justify-between transition-shadow hover:shadow-lg overflow-hidden"
           >
-            <div>
+            <div className={cert.image ? 'pr-24' : ''}>
+              {cert.image && (
+                <img
+                  src={cert.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute top-3 right-3 w-20 h-20 object-contain opacity-90"
+                />
+              )}
               <h3 className="text-2xl font-semibold text-dark-blue mb-3">{cert.title}</h3>
               <p className="text-slate-700 mb-1">
                 <span className="font-medium">Issued by:</span> {cert.issuer}

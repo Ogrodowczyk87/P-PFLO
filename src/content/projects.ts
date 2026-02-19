@@ -66,9 +66,9 @@ export const projects: Project[] = [
         id: 6,
         title: 'NEUROFORAGE',
         image: NEUROFORAGE,
-        github: '',
+        github: 'https://github.com/Ogrodowczyk87/NeuroForge-Labs.git',
         technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Supabase'],
         description:
             'ProcesoryPanel is a full-featured web application that includes a secure login flow, a post‑login dashboard with project tracking (stages, milestones, budgets), and a shopping cart experience to demonstrate e‑commerce logic and UI state management. The app focuses on clean, responsive UI, reusable components, and clear data presentation, showing my ability to build modern, scalable front‑end experiences.',
-    },
+        },
 ];

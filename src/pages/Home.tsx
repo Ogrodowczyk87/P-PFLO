@@ -23,9 +23,25 @@ const Home = () => {
             <h1 className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue mb-4">
               Rafal Ogrodowczyk | Junior Frontend Developer
             </h1>
-            <p className="text-lg md:text-xl font-open-sans text-slate-700 leading-relaxed">
-              Hi, I'm Rafal Ogrodowczyk, a passionate Junior Frontend Developer based in Belfast. I have a deep enthusiasm for new technologies and enjoy creating modern web experiences. With dedication to clean code and user-friendly interfaces, I'm constantly expanding my skills in the ever-evolving tech landscape.
-            </p>
+            <div className="text-base md:text-lg font-open-sans text-slate-700 leading-8 space-y-4 max-w-2xl mx-auto md:mx-0">
+              <p>
+                <span className="text-3xl leading-none align-top">H</span>i, I'm Rafal
+                Ogrodowczyk, a passionate Junior Frontend Developer based in Belfast. I
+                enjoy creating modern web experiences and building clean, user-friendly
+                interfaces.
+              </p>
+              <p>
+                I am also expanding my skills towards cloud technologies, with a strong
+                focus on AWS infrastructure and architecture. I&apos;m particularly interested
+                in how scalable systems are designed, deployed, and maintained in
+                real-world environments.
+              </p>
+              <p>
+                With a commitment to continuous learning, I actively develop both my
+                frontend and cloud knowledge to grow into a well-rounded developer capable
+                of working across the full application lifecycle.
+              </p>
+            </div>
             <div className="flex flex-wrap justify-center md:justify-start mt-6 gap-4">
               <a
                 href="#Projects"
