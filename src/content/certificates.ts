@@ -12,7 +12,7 @@ export const certificates: Certificate[] = [
     title: 'TypeScript Fundamentals',
     issuer: 'CodeStoryBro',
     date: 'November 2024',
-    link: 'https://www.codestorybro.com/en/check?certId=TSFL-2024-98271546'
+    link: 'https://www.codestorybro.com/check?certId=TSFL-2024-98271546'
   },
   {
     id: 2,
