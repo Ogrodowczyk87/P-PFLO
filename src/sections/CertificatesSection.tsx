@@ -1,7 +1,8 @@
 import { certificates } from '../content/certificates';
+import { sectionIds } from '../content/sectionIds';
 
-const Certificates = () => (
-  <section id="Certificates" className="py-20 bg-white">
+const CertificatesSection = () => (
+  <section id={sectionIds.certificates} className="py-20 bg-white">
     <div className="container mx-auto px-6 md:px-12 lg:px-20">
       <h2 className="text-5xl font-extrabold text-center text-dark-blue mb-16 font-poppins">
         Certificates
@@ -44,4 +45,4 @@ const Certificates = () => (
   </section>
 );
 
-export default Certificates;
+export default CertificatesSection;

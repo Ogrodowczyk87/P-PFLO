@@ -5,10 +5,11 @@ import tailwind from '../assets/tailwind.svg';
 import linux from '../assets/linux.svg';
 import react from '../assets/react.svg';
 import AI from '../assets/AI.svg';
+import { sectionIds } from '../content/sectionIds';
 
-const Skills = () => {
+const SkillsSection = () => {
   return (
-    <div id="Skills" className="py-16 pt-[80px] bg-white">
+    <section id={sectionIds.skills} className="py-16 pt-[80px] bg-white">
       <h2 className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue text-center mb-4">
         My Skills
       </h2>
@@ -69,8 +70,8 @@ const Skills = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Skills;
+export default SkillsSection;

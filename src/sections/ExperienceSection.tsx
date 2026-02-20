@@ -1,9 +1,10 @@
 import { Chrono } from 'react-chrono';
 import { experiences } from '../content/experiences';
+import { sectionIds } from '../content/sectionIds';
 
-const Experiences = () => {
+const ExperienceSection = () => {
     return (
-        <div id="Experience" className="bg-cod py-16">
+        <section id={sectionIds.experience} className="bg-cod py-16">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
                     My Experiences
@@ -57,8 +58,8 @@ const Experiences = () => {
                     height: auto !important;
                 }
             `}</style>
-        </div>
+        </section>
     );
 };
 
-export default Experiences;
+export default ExperienceSection;

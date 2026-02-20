@@ -1,9 +1,10 @@
 import { hobbies } from '../content/hobbies';
+import { sectionIds } from '../content/sectionIds';
 
-const Hobby = () => {
+const HobbiesSection = () => {
   return (
-    <div
-      id="Hobby"
+    <section
+      id={sectionIds.hobbies}
       className="py-16 flex items-center justify-center bg-slate-50"
     >
       <div className="container mx-auto px-4">
@@ -25,8 +26,8 @@ const Hobby = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Hobby;
+export default HobbiesSection;

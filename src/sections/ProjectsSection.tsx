@@ -1,9 +1,10 @@
 import { projects } from '../content/projects';
+import { sectionIds } from '../content/sectionIds';
 
-const Projects = () => {
+const ProjectsSection = () => {
   return (
-    <div
-      id="Projects"
+    <section
+      id={sectionIds.projects}
       className="py-16 bg-slate-50"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
@@ -54,8 +55,8 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Projects;
+export default ProjectsSection;

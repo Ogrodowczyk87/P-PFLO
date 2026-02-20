@@ -4,11 +4,12 @@ import { InstagramIcon } from '../components/icons/InstagramIcon';
 import { LinkedInIcon } from '../components/icons/LinkedInIcon';
 import { GithubIcon } from '../components/icons/GithubIcon';
 import { MailsIcon } from '../components/icons/MailsIcon';
+import { sectionIds } from '../content/sectionIds';
 
-const Home = () => {
+const HomeSection = () => {
   return (
-    <div
-      id="Home"
+    <section
+      id={sectionIds.home}
       className="flex items-start justify-center xl:pl-[110px] xl:pr-[40px] py-12 relative bg-slate-50"
     >
       <div className="container bg-white border border-slate-200 shadow-sm rounded-2xl p-8 md:p-10 mt-[60px] mb-[60px] transition-shadow hover:shadow-lg">
@@ -44,13 +45,13 @@ const Home = () => {
             </div>
             <div className="flex flex-wrap justify-center md:justify-start mt-6 gap-4">
               <a
-                href="#Projects"
+                href={`#${sectionIds.projects}`}
                 className="inline-flex items-center justify-center rounded-lg bg-dark-blue px-5 py-3 text-white font-medium transition-colors hover:bg-accent-yellow"
               >
                 View Projects
               </a>
               <a
-                href="#Contact"
+                href={`#${sectionIds.contact}`}
                 className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 text-dark-blue font-medium transition-colors hover:border-accent-yellow hover:text-accent-yellow"
               >
                 Contact Me
@@ -93,12 +94,12 @@ const Home = () => {
       </div>
 
       {/* Animowana strzałka na dole wskazująca na Skills - bardziej na środku */}
-      <div className=" absolute bottom-0 left-[60%] transform -translate-x-1/2 translate-y-8 md:translate-y-[48px] lg:translate-y-[50px] flex flex-col items-center">
+      <div className="absolute bottom-0 left-[60%] transform -translate-x-1/2 translate-y-8 md:translate-y-[48px] lg:translate-y-[50px] flex flex-col items-center">
         {/* Tekst "Check my skills" */}
 
 
         {/* Animowana strzałka */}
-        <a href="#Skills" className="cursor-pointer group">
+        <a href={`#${sectionIds.skills}`} className="cursor-pointer group">
           <div className="w-32 h-24 opacity-70 group-hover:opacity-100 transition-opacity transform rotate-180">
             <AnimateSvg
               width="120%"
@@ -121,8 +122,8 @@ const Home = () => {
           </div>
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Home;
+export default HomeSection;

@@ -1,8 +1,7 @@
-import { NavbarType } from '../../types/types';
 import { MdMenu, MdClose } from 'react-icons/md';
-import logo from '../../assets/logo.png';
+import logo from '../assets/logo.png';
 import { useEffect, useState } from 'react';
-import { navbarItems } from '../../content/navbar';
+import { navigationItems } from '../content/navigation';
 
 export const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -28,23 +27,24 @@ export const Navbar = () => {
     };
 
     return (
-        <div
+        <nav
+            aria-label="Main navigation"
             className={`h-[120px] sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200 ${isSticky ? 'shadow-sm' : ''}`}
         >
             <div className='container mx-auto flex justify-between items-center h-full'>
                 <div className='w-56 p-2 ml-[50px]'>
-                    <img src={logo} alt='logo' className='object-contain' />
+                    <img src={logo} alt='Rafal Ogrodowczyk logo' className='object-contain' />
                 </div>
 
                 <div className='hidden md:block mr-[80px]'>
                     <ul className="flex text-2xl gap-8 font-poppins">
-                        {navbarItems.map((item: NavbarType) => (
+                        {navigationItems.map((item) => (
                             <li key={item.id}>
                                 <a
                                     className="relative py-2 px-6 text-slate-800 hover:text-accent-yellow transition-colors duration-300"
-                                    href={item.link}
+                                    href={item.href}
                                 >
-                                    {item.title}
+                                    {item.label}
                                 </a>
                             </li>
                         ))}
@@ -67,21 +67,21 @@ export const Navbar = () => {
             {isMobileMenuOpen && (
                 <div className="md:hidden bg-white/95 backdrop-blur-sm shadow-sm absolute top-[120px] left-0 w-full z-40 border-t border-slate-200">
                     <ul className="flex flex-col text-xl gap-4 font-poppins p-4">
-                        {navbarItems.map((item: NavbarType) => (
+                        {navigationItems.map((item) => (
                             <li key={item.id}>
                                 <a
                                     className="block py-2 px-4 text-slate-800 hover:bg-slate-100 rounded transition-colors"
-                                    href={item.link}
+                                    href={item.href}
                                     onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
                                 >
-                                    {item.title}
+                                    {item.label}
                                 </a>
                             </li>
                         ))}
                     </ul>
                 </div>
             )}
-        </div>
+        </nav>
     );
 };
 

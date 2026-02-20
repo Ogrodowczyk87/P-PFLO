@@ -3,14 +3,13 @@ import SoftwareHouse from '../assets/SoftwareHouse.jpg';
 import IceCream from '../assets/IceCream.webp';
 import FilmWeb from '../assets/FilmWeb.png';
 import phonebook from '../assets/phonebook.png';
-// import build from '../assets/build.svg';
 import BetterShip from '../assets/BetterShip.png';
 import NEUROFORAGE from '../assets/NEUROFORAGE.png';
 
 export interface Project {
     id: number;
     title: string;
-    image: StaticImageData | string;
+    image: string;
     github: string;
     technologies: string[];
     description: string;

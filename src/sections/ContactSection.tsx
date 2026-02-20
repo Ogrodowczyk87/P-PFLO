@@ -1,8 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import rafal from '../assets/rafal.jpg';
+import { sectionIds } from '../content/sectionIds';
 
-const Profile = () => {
+const ContactSection = () => {
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState({
     submitted: false,
@@ -55,7 +56,7 @@ const Profile = () => {
   };
 
   return (
-    <div id="Contact" className="py-16 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200">
+    <section id={sectionIds.contact} className="py-16 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">
           <div
@@ -138,8 +139,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Profile;
+export default ContactSection;
