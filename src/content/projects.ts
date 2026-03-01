@@ -5,6 +5,12 @@ import FilmWeb from '../assets/FilmWeb.png';
 import phonebook from '../assets/phonebook.png';
 import BetterShip from '../assets/BetterShip.png';
 import NEUROFORAGE from '../assets/NEUROFORAGE.png';
+import MainProject from '../assets/MainProject.png';
+
+export interface TechnologyGroup {
+    category: string;
+    items: string[];
+}
 
 export interface Project {
     id: number;
@@ -12,6 +18,7 @@ export interface Project {
     image: string;
     github: string;
     technologies: string[];
+    technologyGroups?: TechnologyGroup[];
     description: string;
 }
 
@@ -69,5 +76,45 @@ export const projects: Project[] = [
         technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'Supabase'],
         description:
             'ProcesoryPanel is a full-featured web application that includes a secure login flow, a post‑login dashboard with project tracking (stages, milestones, budgets), and a shopping cart experience to demonstrate e‑commerce logic and UI state management. The app focuses on clean, responsive UI, reusable components, and clear data presentation, showing my ability to build modern, scalable front‑end experiences.',
-        },
+    },
+    {
+        id: 7,
+        title: 'Main Project (In Progress)',
+        image: MainProject,
+        github: 'https://github.com/Ogrodowczyk87/Shift-Allocation-Automation-System.git',
+        technologies: ['React', 'TypeScript', 'AWS'],
+        technologyGroups: [
+            {
+                category: 'Frontend',
+                items: ['React', 'TypeScript', 'Tailwind CSS', 'React Router'],
+            },
+            {
+                category: 'Backend (Serverless Architecture)',
+                items: ['AWS Lambda', 'Amazon API Gateway', 'Amazon DynamoDB'],
+            },
+            {
+                category: 'Authentication & Security',
+                items: ['Amazon Cognito', 'IAM (role-based access control)'],
+            },
+            {
+                category: 'Hosting & Infrastructure',
+                items: [
+                    'Amazon S3 (static hosting)',
+                    'Amazon CloudFront (CDN)',
+                    'AWS CloudWatch (logging & monitoring)',
+                    'AWS Budgets (cost control)',
+                ],
+            },
+            {
+                category: 'DevOps & Tooling',
+                items: [
+                    'GitHub (version control)',
+                    'CI/CD (planned)',
+                    'AWS CDK (Infrastructure as Code - planned)',
+                ],
+            },
+        ],
+        description:
+            'Shift Allocation Automation System (in progress) to cloud-based application automating shift planning using training constraints, rotation logic and fairness scoring.\n\nThe system is designed to solve a real operational bottleneck affecting planning time, error rate and workload distribution.\n\nCurrent development includes business rule validation, availability management and historical reporting.\n\nThis is not a demo project but a production-oriented system built to address a real business problem.',
+    },
 ];

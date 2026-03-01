@@ -34,11 +34,41 @@ const ProjectsSection = () => {
                 <p className="text-slate-700 mb-4">{project.description}</p>
                 <div className="mb-4">
                   <h4 className="font-semibold text-dark-blue">Technologies:</h4>
-                  <ul className="list-disc list-inside text-slate-600">
-                    {project.technologies.map((tech, index) => (
-                      <li key={index}>{tech}</li>
-                    ))}
-                  </ul>
+                  {project.technologyGroups?.length ? (
+                    <div className="space-y-3 max-h-72 overflow-y-auto pr-1 mt-2">
+                      {project.technologyGroups.map((group) => (
+                        <div
+                          key={group.category}
+                          className="rounded-lg border border-slate-200 bg-slate-50 p-3"
+                        >
+                          <p className="text-sm font-semibold text-dark-blue mb-2">
+                            {group.category}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {group.items.map((item) => (
+                              <span
+                                key={`${group.category}-${item}`}
+                                className="inline-flex items-center rounded-full bg-white border border-slate-200 px-2.5 py-1 text-xs text-slate-700"
+                              >
+                                {item}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="inline-flex items-center rounded-full bg-slate-100 border border-slate-200 px-2.5 py-1 text-xs text-slate-700"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 {project.github && (
                   <a

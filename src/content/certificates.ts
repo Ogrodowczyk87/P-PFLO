@@ -17,13 +17,13 @@ export const certificates: Certificate[] = [
     date: 'November 2024',
     link: 'https://www.codestorybro.com/check?certId=TSFL-2024-98271546'
   },
-  {
-    id: 2,
-    title: 'TS course in progress',
-    issuer: 'Coursera',
-    date: '--',
-    link: '#'
-  },
+  // {
+  //   id: 2,
+  //   title: 'TS course in progress',
+  //   issuer: 'Coursera',
+  //   date: '--',
+  //   link: '#'
+  // },
   {
     id: 3,
     title: 'Cloud Support Specialist',
