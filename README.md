@@ -17,6 +17,54 @@ P-PFLO is a modern web application built with React, TypeScript, and TailwindCSS
 - **Build Tool**: Vite
 - **Linting**: ESLint
 
+## Deployment & CI/CD
+The application is deployed using a cloud-native static hosting architecture on AWS with an automated CI/CD pipeline.
+
+### Infrastructure
+- **Amazon S3**: Static website hosting for the production build.
+- **Amazon CloudFront**: Global CDN for fast content delivery and caching.
+- **AWS IAM**: Secure access management for deployment credentials.
+- **AWS Certificate Manager (ACM)**: HTTPS certificate management (for custom domains).
+- **AWS Route 53**: Optional DNS management for a custom domain.
+
+### CI/CD Pipeline
+Deployment is fully automated using **GitHub Actions**.
+
+Pipeline steps:
+1. Trigger on every push to the `main` branch.
+2. Install project dependencies.
+3. Build the production version with Vite.
+4. Upload build artifacts to Amazon S3.
+5. Invalidate CloudFront cache to serve the latest version immediately.
+
+### Deployment Workflow
+```text
+GitHub Repository
+        │
+        ▼
+GitHub Actions (CI/CD)
+        │
+        ▼
+Build (Vite / React)
+        │
+        ▼
+Upload to Amazon S3
+        │
+        ▼
+CloudFront CDN
+        │
+        ▼
+Public Website
+```
+
+### DevOps Skills Demonstrated
+- CI/CD pipeline design using GitHub Actions.
+- Automated build and deployment workflows.
+- Static site hosting architecture on AWS.
+- CDN caching and cache invalidation using CloudFront.
+- Secure credential management using GitHub Secrets.
+- Infrastructure integration between GitHub and AWS.
+
 ## Installation
 To set up the project locally, follow these steps:
 
