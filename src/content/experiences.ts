@@ -31,6 +31,12 @@ export const experiences: Experience[] = [
             'Precisely cut roofing materials to fit complex angles and intersections. Managed inventory of supplies and maintained equipment. Applied specialized solutions to ensure smooth finishes. Determined daily material requirements and coordinated logistics. Removed and properly disposed of old materials to maintain clean work sites.',
     },
     {
+        title: '14.10.2023 – 31.12.2025',
+        cardTitle: 'RYOBI',
+        cardSubtitle: 'Die Cast Operator',
+        cardDetailedText: 'Performed root-cause analysis on production issues, interpreted technical schematics and documentation, and created operational reports and spreadsheets to improve production tracking and efficiency.',   
+    },
+    {
         title: '20.09.2022 - Present',
         cardTitle: 'Amazon',
         cardSubtitle: 'Warehouse Operator',
