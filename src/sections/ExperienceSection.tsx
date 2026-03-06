@@ -2,6 +2,33 @@ import { Chrono } from 'react-chrono';
 import { experiences } from '../content/experiences';
 import { sectionIds } from '../content/sectionIds';
 
+const chronoGlobalStyles = `
+.chrono-controls,
+.chrono-icons,
+.chrono-container .timeline-main-wrapper .timeline-controls,
+.timeline-controls-wrapper {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.chrono-container {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.timeline-main-wrapper {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+.timeline-vertical-container {
+    overflow: visible !important;
+    height: auto !important;
+}
+`;
+
 const ExperienceSection = () => {
     return (
         <section id={sectionIds.experience} className="bg-cod py-16">
@@ -32,32 +59,7 @@ const ExperienceSection = () => {
                     />
                 </div>
             </div>
-            <style global jsx>{`
-                .chrono-controls, 
-                .chrono-icons, 
-                .chrono-container .timeline-main-wrapper .timeline-controls,
-                .timeline-controls-wrapper {
-                    display: none !important;
-                    visibility: hidden !important;
-                    opacity: 0 !important;
-                    pointer-events: none !important;
-                }
-
-                .chrono-container {
-                    overflow: visible !important;
-                    height: auto !important;
-                }
-
-                .timeline-main-wrapper {
-                    overflow: visible !important;
-                    height: auto !important;
-                }
-
-                .timeline-vertical-container {
-                    overflow: visible !important;
-                    height: auto !important;
-                }
-            `}</style>
+            <style>{chronoGlobalStyles}</style>
         </section>
     );
 };

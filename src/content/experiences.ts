@@ -1,5 +1,3 @@
-import { Si3M, SiKomoot } from "react-icons/si";
-
 export interface Experience {
     title: string;
     cardTitle: string;
