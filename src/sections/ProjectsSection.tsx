@@ -23,6 +23,8 @@ const ProjectsSection = () => {
                   alt={project.title}
                   className={`${project.id === 5 || project.id === 6
                       ? 'h-32 w-32 object-contain'
+                      : project.id === 7
+                        ? 'w-full h-full object-contain p-2'
                       : 'w-full h-full object-cover'
                     }`}
                 />
@@ -31,7 +33,7 @@ const ProjectsSection = () => {
                 <h3 className="text-xl font-semibold text-dark-blue mb-2">
                   {project.title}
                 </h3>
-                <p className="text-slate-700 mb-4">{project.description}</p>
+                <p className="text-slate-700 mb-4 whitespace-pre-line">{project.description}</p>
                 <div className="mb-4">
                   <h4 className="font-semibold text-dark-blue">Technologies:</h4>
                   {project.technologyGroups?.length ? (

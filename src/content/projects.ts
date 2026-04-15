@@ -5,7 +5,7 @@ import FilmWeb from '../assets/FilmWeb.png';
 import phonebook from '../assets/phonebook.png';
 import BetterShip from '../assets/BetterShip.png';
 import NEUROFORAGE from '../assets/NEUROFORAGE.png';
-import MainProject from '../assets/MainProject.png';
+import MainProject from '../assets/main.png';
 
 export interface TechnologyGroup {
     category: string;
@@ -115,6 +115,6 @@ export const projects: Project[] = [
             },
         ],
         description:
-            'Shift Allocation Automation System (in progress) to cloud-based application automating shift planning using training constraints, rotation logic and fairness scoring.\n\nThe system is designed to solve a real operational bottleneck affecting planning time, error rate and workload distribution.\n\nCurrent development includes business rule validation, availability management and historical reporting.\n\nThis is not a demo project but a production-oriented system built to address a real business problem.',
+            'Shift Allocation Automation System is an in-progress cloud-based application automating shift planning using training constraints, rotation logic and fairness scoring.\n\nThe system is designed to solve a real operational bottleneck affecting planning time, error rate and workload distribution.\n\nCurrent development includes business rule validation, availability management and historical reporting.\n\nThis is not a demo project but a production-oriented system built to address a real business problem.',
     },
 ];
