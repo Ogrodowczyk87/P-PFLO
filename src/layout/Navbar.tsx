@@ -43,6 +43,7 @@ export const Navbar = () => {
                                 <a
                                     className="relative py-2 px-6 text-slate-800 hover:text-accent-yellow transition-colors duration-300"
                                     href={item.href}
+                                    download={item.download}
                                 >
                                     {item.label}
                                 </a>
@@ -72,6 +73,7 @@ export const Navbar = () => {
                                 <a
                                     className="block py-2 px-4 text-slate-800 hover:bg-slate-100 rounded transition-colors"
                                     href={item.href}
+                                    download={item.download}
                                     onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
                                 >
                                     {item.label}

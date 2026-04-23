@@ -27,4 +27,10 @@ export const navigationItems: NavItem[] = [
     label: 'Experience',
     href: `#${sectionIds.experience}`,
   },
+  {
+    id: 6,
+    label: 'CV',
+    href: '/Rafal-Ogrodowczyk-CV.pdf',
+    download: true,
+  },
 ];

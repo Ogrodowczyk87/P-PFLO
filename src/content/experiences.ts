@@ -9,14 +9,14 @@ export const experiences: Experience[] = [
     {
         title: '20.09.2013 - 30.02.2015',
         cardTitle: 'Arla Foods',
-        cardSubtitle: 'Warehouse Operator',
+        cardSubtitle: 'Operations Associate',
         cardDetailedText: 
             ``,
     },
     {
         title: '1.067-2015 - 30.06.2021',
         cardTitle: 'NFT',
-        cardSubtitle: 'Warehouse Operator',
+        cardSubtitle: 'Operations Associate',
         cardDetailedText:
             '',
 
@@ -37,7 +37,7 @@ export const experiences: Experience[] = [
     {
         title: '20.09.2022 - Present',
         cardTitle: 'Amazon',
-        cardSubtitle: 'Warehouse Operator',
+        cardSubtitle: 'Operations Associate at Amazon',
         cardDetailedText: 'Responsible for fulfillment operations including picking, packing, and dispatching orders. Ensuring proper inventory management with accurate labeling and storage. Maintaining workplace safety standards and contributing to a fast-paced, efficient work environment.',
     },
 ];
