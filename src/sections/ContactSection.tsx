@@ -1,13 +1,17 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import rafal from '../assets/rafal.jpg';
 import { sectionIds } from '../content/sectionIds';
 
 const ContactSection = () => {
-  const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState({
     submitted: false,
     message: ''
+  });
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
   });
 
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
@@ -20,7 +24,7 @@ const ContactSection = () => {
     }
   }, [publicKey]);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setStatus({ submitted: true, message: 'Sending...' });
@@ -38,26 +42,42 @@ const ContactSection = () => {
       return;
     }
 
-    if (form.current) {
-      emailjs.sendForm(
+    try {
+      await emailjs.send(
         serviceId,
         templateId,
-        form.current,
+        {
+          user_name: formData.user_name,
+          user_email: formData.user_email,
+          message: formData.message,
+          from_name: formData.user_name,
+          from_email: formData.user_email,
+          reply_to: formData.user_email,
+        },
         publicKey
-      )
-        .then(() => {
-          setStatus({
-            submitted: true,
-            message: 'Message sent successfully!'
-          });
-          form.current?.reset();
-        }, (error) => {
-          console.error('EmailJS send failed.', error);
-          setStatus({
-            submitted: true,
-            message: 'Failed to send the message. Please try again later or contact me directly at r.ogrodowczyk87@gmail.com.'
-          });
-        });
+      );
+
+      setStatus({
+        submitted: true,
+        message: 'Message sent successfully!'
+      });
+      setFormData({
+        user_name: '',
+        user_email: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('EmailJS send failed.', error);
+      const errorMessage = error instanceof Error
+        ? error.message
+        : typeof error === 'object' && error !== null && 'text' in error
+          ? String(error.text)
+          : 'Unknown error';
+
+      setStatus({
+        submitted: true,
+        message: `Failed to send the message. ${errorMessage}`
+      });
     }
   };
 
@@ -95,7 +115,7 @@ const ContactSection = () => {
                 {status.message}
               </div>
             )}
-            <form ref={form} onSubmit={sendEmail} className="space-y-5">
+            <form onSubmit={sendEmail} className="space-y-5">
               <div>
                 <label htmlFor="user_name" className="block text-dark-blue font-medium mb-2">
                   Name
@@ -104,6 +124,8 @@ const ContactSection = () => {
                   type="text"
                   name="user_name"
                   id="user_name"
+                  value={formData.user_name}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, user_name: e.target.value }))}
                   className="w-full border border-light-gray rounded-lg p-3 bg-slate-50 focus:outline-none focus:border-accent-yellow focus:ring-2 focus:ring-accent-yellow"
                   placeholder="Your Name"
                   required
@@ -117,6 +139,8 @@ const ContactSection = () => {
                   type="email"
                   name="user_email"
                   id="user_email"
+                  value={formData.user_email}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, user_email: e.target.value }))}
                   className="w-full border border-light-gray rounded-lg p-3 bg-slate-50 focus:outline-none focus:border-accent-yellow focus:ring-2 focus:ring-accent-yellow"
                   placeholder="Your Email"
                   required
@@ -129,6 +153,8 @@ const ContactSection = () => {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
                   className="w-full border border-light-gray rounded-lg p-3 bg-slate-50 focus:outline-none focus:border-accent-yellow focus:ring-2 focus:ring-accent-yellow"
                   placeholder="Your Message"
                   rows={4}
