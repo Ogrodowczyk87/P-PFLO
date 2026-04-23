@@ -12,8 +12,9 @@ const Footer = () => {
               About Me
             </h2>
             <p className="text-slate-300 mb-4">
-              Junior Frontend Developer based in Belfast with a passion for
-              creating modern web experiences using cutting-edge technologies.
+              Aspiring Platform / DevOps Engineer with a frontend background,
+              focused on AWS, automation, CI/CD and production-oriented cloud
+              applications.
             </p>
           </section>
           <nav aria-label="Footer quick links">

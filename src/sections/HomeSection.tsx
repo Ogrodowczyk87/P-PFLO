@@ -22,25 +22,30 @@ const HomeSection = () => {
               Open to collaboration • Belfast, Northern Ireland
             </div>
             <h1 className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue mb-4">
-              Rafal Ogrodowczyk | Junior Frontend Developer
+              Rafal Ogrodowczyk | Aspiring Platform / DevOps Engineer
             </h1>
             <div className="text-base md:text-lg font-open-sans text-slate-700 leading-8 space-y-4 max-w-2xl mx-auto md:mx-0">
               <p>
-                <span className="text-3xl leading-none align-top">H</span>i, I'm Rafal
-                Ogrodowczyk, a passionate Junior Frontend Developer based in Belfast. I
-                enjoy creating modern web experiences and building clean, user-friendly
-                interfaces.
+                <span className="text-3xl leading-none align-top">Hi,</span> I'm Rafal
+                Ogrodowczyk, an aspiring Platform / DevOps Engineer with a strong
+                frontend background. I started with modern web development using
+                JavaScript, TypeScript and React, building responsive applications,
+                integrating APIs and working with authentication flows.
               </p>
               <p>
-                I am also expanding my skills towards cloud technologies, with a strong
-                focus on AWS infrastructure and architecture. I&apos;m particularly interested
-                in how scalable systems are designed, deployed, and maintained in
-                real-world environments.
+                Over time, my focus shifted toward the infrastructure behind
+                applications: how systems are deployed, automated, monitored and
+                operated reliably in production environments. I&apos;m especially interested
+                in automation, reliability and building systems that are scalable,
+                maintainable and production-ready.
               </p>
               <p>
-                With a commitment to continuous learning, I actively develop both my
-                frontend and cloud knowledge to grow into a well-rounded developer capable
-                of working across the full application lifecycle.
+                I&apos;m currently building a cloud-based Shift Allocation Automation System
+                with a full-stack architecture using React, Node.js, GraphQL and
+                PostgreSQL, deployed on AWS with services such as Amazon RDS, App
+                Runner, S3, CloudFront, Cognito and CloudWatch. Alongside that, I&apos;m
+                continuing to grow my cloud and infrastructure skills through hands-on
+                AWS work, Linux environments and CI/CD with GitHub Actions.
               </p>
             </div>
             <div className="flex flex-wrap justify-center md:justify-start mt-6 gap-4">

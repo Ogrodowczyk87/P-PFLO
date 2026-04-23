@@ -82,15 +82,15 @@ export const projects: Project[] = [
         title: 'Main Project (In Progress)',
         image: MainProject,
         github: 'https://github.com/Ogrodowczyk87/Shift-Allocation-Automation-System.git',
-        technologies: ['React', 'TypeScript', 'AWS'],
+        technologies: ['React', 'Node.js', 'GraphQL', 'PostgreSQL', 'AWS'],
         technologyGroups: [
             {
                 category: 'Frontend',
                 items: ['React', 'TypeScript', 'Tailwind CSS', 'React Router'],
             },
             {
-                category: 'Backend (Serverless Architecture)',
-                items: ['AWS Lambda', 'Amazon API Gateway', 'Amazon DynamoDB'],
+                category: 'Backend',
+                items: ['Node.js', 'GraphQL API', 'PostgreSQL'],
             },
             {
                 category: 'Authentication & Security',
@@ -99,8 +99,10 @@ export const projects: Project[] = [
             {
                 category: 'Hosting & Infrastructure',
                 items: [
-                    'Amazon S3 (static hosting)',
-                    'Amazon CloudFront (CDN)',
+                    'AWS App Runner',
+                    'Amazon RDS',
+                    'Amazon S3',
+                    'Amazon CloudFront',
                     'AWS CloudWatch (logging & monitoring)',
                     'AWS Budgets (cost control)',
                 ],
@@ -109,12 +111,12 @@ export const projects: Project[] = [
                 category: 'DevOps & Tooling',
                 items: [
                     'GitHub (version control)',
-                    'CI/CD (planned)',
-                    'AWS CDK (Infrastructure as Code - planned)',
+                    'GitHub Actions (CI/CD concepts)',
+                    'Linux CLI',
                 ],
             },
         ],
         description:
-            'Shift Allocation Automation System is an in-progress cloud-based application automating shift planning using training constraints, rotation logic and fairness scoring.\n\nThe system is designed to solve a real operational bottleneck affecting planning time, error rate and workload distribution.\n\nCurrent development includes business rule validation, availability management and historical reporting.\n\nThis is not a demo project but a production-oriented system built to address a real business problem.',
+            'Shift Allocation Automation System is a production-oriented cloud application designed to automate workforce planning in a high-volume operational environment of around 200 employees.\n\nIt applies business rules, training constraints and rotation logic to improve workload distribution, reduce planning time and minimise operational errors.\n\nThe platform is being built with React, Node.js, GraphQL and PostgreSQL and deployed on AWS using Amazon RDS, App Runner, S3, CloudFront, Cognito and CloudWatch.\n\nThis is a real-world system focused on scalability, maintainability and reliable day-to-day operation rather than a demo-only project.',
     },
 ];
