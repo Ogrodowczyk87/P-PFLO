@@ -26,6 +26,11 @@ const ContactSection = () => {
     setStatus({ submitted: true, message: 'Sending...' });
 
     if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS is not configured correctly.', {
+        hasServiceId: Boolean(serviceId),
+        hasTemplateId: Boolean(templateId),
+        hasPublicKey: Boolean(publicKey),
+      });
       setStatus({
         submitted: true,
         message: 'Email service is not configured. Please try again later.'
@@ -46,10 +51,11 @@ const ContactSection = () => {
             message: 'Message sent successfully!'
           });
           form.current?.reset();
-        }, () => {
+        }, (error) => {
+          console.error('EmailJS send failed.', error);
           setStatus({
             submitted: true,
-            message: 'Failed to send the message. Try again later.'
+            message: 'Failed to send the message. Please try again later or contact me directly at r.ogrodowczyk87@gmail.com.'
           });
         });
     }
