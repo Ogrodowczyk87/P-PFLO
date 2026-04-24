@@ -39,7 +39,7 @@ const Card = ({ className }: CardProps) => {
       <div className="line flex gap-4 hover:bg-gray-800/30 rounded-md px-2 py-1 transition-colors duration-200">
         <p className="number text-gray-400 w-6 text-right font-semibold select-none">5</p>
         <p className="code ml-16">
-          Nickname <span className="text-yellow-400 font-bold">=</span>{' '}
+          FullName <span className="text-yellow-400 font-bold">=</span>{' '}
           <span className="text-green-400">"Rafal Ogrodowczyk"</span>,
         </p>
       </div>
@@ -56,8 +56,8 @@ const Card = ({ className }: CardProps) => {
         <p className="code ml-24">
           <span className="text-gray-300">{'{'}</span>
           <span className="text-green-400">
-            "Coding"<span className="text-white">,</span> "Building simple
-            websites"<span className="text-white">,</span> "New technologies"
+            "Coding"<span className="text-white">,</span> "Cloud technologies"
+            <span className="text-white">,</span> "Automation"
           </span>
           <span className="text-gray-300">{'}'}</span>,
         </p>
@@ -75,7 +75,8 @@ const Card = ({ className }: CardProps) => {
         <p className="code ml-24">
           <span className="text-gray-300">{'{'}</span>
           <span className="text-green-400">
-            "Polish (native)"<span className="text-white">,</span> "English B2+"
+            "Polish (Native)"<span className="text-white">,</span> "English
+            (B2+)"
           </span>
           <span className="text-gray-300">{'}'}</span>,
         </p>
@@ -84,10 +85,8 @@ const Card = ({ className }: CardProps) => {
         <p className="number text-gray-400 w-6 text-right font-semibold select-none">10</p>
         <p className="code ml-16">
           Bio <span className="text-yellow-400 font-bold">=</span>{' '}
-          <span className="text-green-400">"Never Give Up"</span>{' '}
-          <span className="text-yellow-400 font-bold">+</span>{' '}
           <span className="text-green-400">
-            "always stay focused on your goals"
+            "Aspiring Platform and DevOps Engineer with a strong frontend background, focused on cloud technologies, automation, and scalable production-ready systems."
           </span>
         </p>
       </div>
