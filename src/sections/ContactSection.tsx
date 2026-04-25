@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 import rafal from '../assets/rafal.jpg';
 import { sectionIds } from '../content/sectionIds';
+import {
+  fadeUpVariants,
+  leftColumnVariants,
+  rightColumnVariants,
+} from '../lib/src/utils/motionVariants';
 
 const ContactSection = () => {
   const [status, setStatus] = useState({
@@ -82,11 +88,19 @@ const ContactSection = () => {
   };
 
   return (
-    <section id={sectionIds.contact} className="py-16 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200">
+    <motion.section
+      id={sectionIds.contact}
+      className="py-16 bg-gradient-to-b from-slate-100 via-slate-50 to-slate-200"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.15 }}
+      variants={fadeUpVariants}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">
-          <div
+          <motion.div
             className="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden p-8 transition-shadow hover:shadow-lg"
+            variants={leftColumnVariants}
           >
             <div className="flex flex-col items-center text-center">
               <img
@@ -102,10 +116,11 @@ const ContactSection = () => {
               </p>
               <div className="mt-6 w-16 h-1 rounded-full bg-accent-yellow"></div>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             className="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden p-8 transition-shadow hover:shadow-lg"
+            variants={rightColumnVariants}
           >
             <h3 className="text-2xl font-poppins font-bold text-center text-dark-blue mb-6">
               Contact Me
@@ -168,10 +183,10 @@ const ContactSection = () => {
                 Send Message
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

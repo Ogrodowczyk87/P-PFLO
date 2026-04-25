@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Card from '../components/ui/Card';
 import { AnimateSvg } from '../components/ui/AnimateSvg';
 import { InstagramIcon } from '../components/icons/InstagramIcon';
@@ -5,50 +6,85 @@ import { LinkedInIcon } from '../components/icons/LinkedInIcon';
 import { GithubIcon } from '../components/icons/GithubIcon';
 import { MailsIcon } from '../components/icons/MailsIcon';
 import { sectionIds } from '../content/sectionIds';
+import {
+  cardVariants,
+  itemVariants,
+  sectionVariants,
+  socialVariants,
+  arrowVariants,
+} from '../lib/src/utils/motionVariants';
 
 const HomeSection = () => {
   return (
-    <section
+    <motion.section
       id={sectionIds.home}
       className="flex items-start justify-center xl:pl-[110px] xl:pr-[40px] py-12 relative bg-slate-50"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.15 }}
+      variants={sectionVariants}
     >
       <div className="container bg-white border border-slate-200 shadow-sm rounded-2xl p-8 md:p-10 mt-[60px] mb-[60px] transition-shadow hover:shadow-lg">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <div className="w-full md:w-1/2">
+          <motion.div
+            className="w-full md:w-1/2"
+            variants={cardVariants}
+          >
             <Card className="shadow-sm rounded-xl p-6 bg-slate-50 border border-slate-200" />
-          </div>
-          <div className="w-full md:w-1/2 text-center md:text-left mt-6 md:mt-0">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-1 text-sm text-slate-600 mb-4">
+          </motion.div>
+
+          <motion.div
+            className="w-full md:w-1/2 text-center md:text-left mt-6 md:mt-0"
+            variants={sectionVariants}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-1 text-sm text-slate-600 mb-4"
+              variants={itemVariants}
+            >
               Open to collaboration • Belfast, Northern Ireland
-            </div>
-            <h1 className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue mb-4">
+            </motion.div>
+
+            <motion.h1
+              className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue mb-4"
+              variants={itemVariants}
+            >
               Rafal Ogrodowczyk | Aspiring Platform / DevOps Engineer
-            </h1>
-            <div className="text-base md:text-lg font-open-sans text-slate-700 leading-8 space-y-4 max-w-2xl mx-auto md:mx-0">
-              <p>
-                <span className="text-3xl leading-none align-top">Hi,</span> I'm Rafal
+            </motion.h1>
+
+            <motion.div
+              className="text-base md:text-lg font-open-sans text-slate-700 leading-8 space-y-4 max-w-2xl mx-auto md:mx-0"
+              variants={itemVariants}
+            >
+              <motion.p variants={itemVariants}>
+                <span className="text-3xl leading-none align-top">H</span>i, I'm Rafal
                 Ogrodowczyk, an aspiring Platform / DevOps Engineer with a strong
                 frontend background. I started with modern web development using
                 JavaScript, TypeScript and React, building responsive applications,
                 integrating APIs and working with authentication flows.
-              </p>
-              <p>
+              </motion.p>
+
+              <motion.p variants={itemVariants}>
                 Over time, my focus shifted toward the infrastructure behind
                 applications: how systems are deployed, automated, monitored and
-                operated reliably in production environments. I&apos;m especially interested
+                operated reliably in production environments. I'm especially interested
                 in automation, reliability and building systems that are scalable,
                 maintainable and production-ready.
-              </p>
-              <p>
-                I&apos;m currently building a cloud-based Shift Allocation Automation System
+              </motion.p>
+
+              <motion.p variants={itemVariants}>
+                I'm currently building a cloud-based Shift Allocation Automation System
                 with a full-stack architecture using React, Node.js, GraphQL and
                 PostgreSQL, deployed on AWS with services such as Amazon RDS, App
-                Runner, S3, CloudFront, Cognito and CloudWatch. Alongside that, I&apos;m
+                Runner, S3, CloudFront, Cognito and CloudWatch. Alongside that, I'm
                 continuing to grow my cloud and infrastructure skills through hands-on
                 AWS work, Linux environments and CI/CD with GitHub Actions.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center md:justify-start mt-6 gap-4">
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-wrap justify-center md:justify-start mt-6 gap-4"
+              variants={itemVariants}
+            >
               <a
                 href={`#${sectionIds.projects}`}
                 className="inline-flex items-center justify-center rounded-lg bg-dark-blue px-5 py-3 text-white font-medium transition-colors hover:bg-accent-yellow"
@@ -61,49 +97,58 @@ const HomeSection = () => {
               >
                 Contact Me
               </a>
-            </div>
-            <div className="flex justify-center md:justify-start mt-6 space-x-4">
-              <a
+            </motion.div>
+
+            <motion.div
+              className="flex justify-center md:justify-start mt-6 space-x-4"
+              variants={socialVariants}
+            >
+              <motion.a
                 href="https://www.instagram.com/zastrzyk_87/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-600 hover:text-accent-yellow transition-colors"
+                variants={itemVariants}
               >
                 <InstagramIcon size={24} />
-              </a>
-              <a
+              </motion.a>
+
+              <motion.a
                 href="https://www.linkedin.com/in/rafal-ogrodowczyk-85648a251/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-600 hover:text-accent-yellow transition-colors"
+                variants={itemVariants}
               >
                 <LinkedInIcon size={24} />
-              </a>
-              <a
+              </motion.a>
+
+              <motion.a
                 href="https://github.com/Ogrodowczyk87"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-600 hover:text-accent-yellow transition-colors"
+                variants={itemVariants}
               >
                 <GithubIcon size={24} />
-              </a>
-              <a
+              </motion.a>
+
+              <motion.a
                 href="mailto:r.ogrodowczyk87@gmail.com"
                 className="text-slate-600 hover:text-accent-yellow transition-colors"
+                variants={itemVariants}
               >
                 <MailsIcon size={24} />
-              </a>
-            </div>
-          </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Animowana strzałka na dole wskazująca na Skills - bardziej na środku */}
-      <div className="absolute bottom-0 left-[60%] transform -translate-x-1/2 translate-y-8 md:translate-y-[48px] lg:translate-y-[50px] flex flex-col items-center">
-        {/* Tekst "Check my skills" */}
-
-
-        {/* Animowana strzałka */}
+      <motion.div
+        className="absolute bottom-0 left-[60%] transform -translate-x-1/2 translate-y-8 md:translate-y-[48px] lg:translate-y-[50px] flex flex-col items-center"
+        variants={arrowVariants}
+      >
         <a href={`#${sectionIds.skills}`} className="cursor-pointer group">
           <div className="w-32 h-24 opacity-70 group-hover:opacity-100 transition-opacity transform rotate-180">
             <AnimateSvg
@@ -120,14 +165,12 @@ const HomeSection = () => {
               animationBounce={0.2}
               reverseAnimation={false}
               enableHoverAnimation={true}
-              // hoverAnimationType="color"
-              // hoverStrokeColor="#fbbf24"
               initialAnimation={true}
             />
           </div>
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

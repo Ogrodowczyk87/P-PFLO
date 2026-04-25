@@ -1,21 +1,39 @@
+import { motion } from 'framer-motion';
 import { projects } from '../content/projects';
 import { sectionIds } from '../content/sectionIds';
+import {
+  fadeUpVariants,
+  gridStaggerVariants,
+  revealCardVariants,
+} from '../lib/src/utils/motionVariants';
 
 const ProjectsSection = () => {
   return (
-    <section
+    <motion.section
       id={sectionIds.projects}
       className="py-16 bg-slate-50"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.12 }}
+      variants={fadeUpVariants}
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
-        <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
+        <motion.h2
+          className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12"
+          variants={fadeUpVariants}
+        >
           My Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+          variants={gridStaggerVariants}
+        >
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.id}
               className="h-full min-h-[620px] bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden transition-shadow hover:shadow-lg flex flex-col"
+              variants={revealCardVariants}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <div className="h-48 bg-slate-50 flex items-center justify-center">
                 <img
@@ -83,11 +101,11 @@ const ProjectsSection = () => {
                   </a>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

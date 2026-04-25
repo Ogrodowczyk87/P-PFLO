@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion';
 import { Chrono } from 'react-chrono';
 import { experiences } from '../content/experiences';
 import { sectionIds } from '../content/sectionIds';
+import { fadeUpVariants } from '../lib/src/utils/motionVariants';
 
 const chronoGlobalStyles = `
 .chrono-controls,
@@ -31,12 +33,22 @@ const chronoGlobalStyles = `
 
 const ExperienceSection = () => {
     return (
-        <section id={sectionIds.experience} className="bg-cod py-16">
+        <motion.section
+            id={sectionIds.experience}
+            className="bg-cod py-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={fadeUpVariants}
+        >
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12">
+                <motion.h2
+                    className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12"
+                    variants={fadeUpVariants}
+                >
                     My Experiences
-                </h2>
-                <div style={{ width: '100%', height: 'auto' }}>
+                </motion.h2>
+                <motion.div style={{ width: '100%', height: 'auto' }} variants={fadeUpVariants}>
                     <Chrono
                         items={experiences}
                         mode="VERTICAL"
@@ -57,10 +69,10 @@ const ExperienceSection = () => {
                             titleColorActive: '#FFFFFF',
                         }}
                     />
-                </div>
+                </motion.div>
             </div>
             <style>{chronoGlobalStyles}</style>
-        </section>
+        </motion.section>
     );
 };
 
