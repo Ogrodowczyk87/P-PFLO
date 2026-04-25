@@ -13,17 +13,33 @@ import {
   socialVariants,
   arrowVariants,
 } from '../lib/src/utils/motionVariants';
+import { useEffect, useState } from 'react';
 
 const HomeSection = () => {
+const roleText = 'Aspiring Platform / DevOps Engineer';
+const [typedText, setTypedText] = useState('');
+
+useEffect(() => {
+  let currentIndex = 0;
+
+    const typingInterval = window.setInterval(() => {
+      if (currentIndex < roleText.length) {
+        setTypedText(roleText.slice(0, currentIndex + 1))
+        currentIndex += 1
+      } else {
+        window.clearInterval(typingInterval)
+      }
+    }, 70)
+    return () => window.clearInterval(typingInterval)
+}, [])
+
   return (
     <motion.section
       id={sectionIds.home}
-      className="flex items-start justify-center xl:pl-[110px] xl:pr-[40px] py-12 relative bg-slate-50"
-      initial="hidden"
+      className="flex items-start justify-center xl:pl-[110px] xl:pr-[40px] py-12 relative bg-slate-50" initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.15 }}
-      variants={sectionVariants}
-    >
+      variants={sectionVariants}    >
       <div className="container bg-white border border-slate-200 shadow-sm rounded-2xl p-8 md:p-10 mt-[60px] mb-[60px] transition-shadow hover:shadow-lg">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <motion.div
@@ -44,12 +60,15 @@ const HomeSection = () => {
               Open to collaboration • Belfast, Northern Ireland
             </motion.div>
 
-            <motion.h1
-              className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue mb-4"
-              variants={itemVariants}
-            >
-              Rafal Ogrodowczyk | Aspiring Platform / DevOps Engineer
-            </motion.h1>
+          <motion.h1
+  className="text-4xl md:text-5xl font-poppins font-bold text-dark-blue mb-4"
+  variants={itemVariants}
+>
+  <span className="block">Rafal Ogrodowczyk |</span>
+  <span className="block min-h-[1.2em] text-accent-yellow">
+    {typedText}
+  </span>
+</motion.h1>
 
             <motion.div
               className="text-base md:text-lg font-open-sans text-slate-700 leading-8 space-y-4 max-w-2xl mx-auto md:mx-0"
