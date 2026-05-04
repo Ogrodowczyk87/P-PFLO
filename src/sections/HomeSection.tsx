@@ -75,28 +75,29 @@ useEffect(() => {
               variants={itemVariants}
             >
               <motion.p variants={itemVariants}>
-                <span className="text-3xl leading-none align-top">H</span>i, I'm Rafal
-                Ogrodowczyk, an aspiring Platform / DevOps Engineer with a strong
-                frontend background. I started with modern web development using
-                JavaScript, TypeScript and React, building responsive applications,
-                integrating APIs and working with authentication flows.
+                <span className="text-3xl leading-none align-top">A</span>spiring
+                Platform / DevOps Engineer with a strong foundation in frontend
+                development (JavaScript, TypeScript, React) and a focused transition
+                into cloud infrastructure, automation and system reliability.
               </motion.p>
 
               <motion.p variants={itemVariants}>
-                Over time, my focus shifted toward the infrastructure behind
-                applications: how systems are deployed, automated, monitored and
-                operated reliably in production environments. I'm especially interested
-                in automation, reliability and building systems that are scalable,
-                maintainable and production-ready.
+                Experienced in building and deploying applications on AWS, working
+                with services such as EC2, S3, IAM, CloudFront and RDS. Familiar with
+                CI/CD pipelines using GitHub Actions and comfortable working in Linux
+                environments (CLI, permissions, system operations).
               </motion.p>
 
               <motion.p variants={itemVariants}>
-                I'm currently building a cloud-based Shift Allocation Automation System
-                with a full-stack architecture using React, Node.js, GraphQL and
-                PostgreSQL, deployed on AWS with services such as Amazon RDS, App
-                Runner, S3, CloudFront, Cognito and CloudWatch. Alongside that, I'm
-                continuing to grow my cloud and infrastructure skills through hands-on
-                AWS work, Linux environments and CI/CD with GitHub Actions.
+                Currently developing practical skills through the Amazon Career Choice
+                Cloud Support Specialist programme, focusing on cloud architecture and
+                infrastructure concepts.
+              </motion.p>
+
+              <motion.p variants={itemVariants}>
+                Focused on Platform / DevOps / Cloud Engineering roles, with a strong
+                interest in automation, scalable systems and production-ready
+                infrastructure.
               </motion.p>
             </motion.div>
 
