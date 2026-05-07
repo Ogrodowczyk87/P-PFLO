@@ -30,7 +30,7 @@ export const navigationItems: NavItem[] = [
   {
     id: 6,
     label: 'CV',
-    href: '/Rafal-Ogrodowczyk-CV.pdf',
+    href: '/RafalCV.pdf',
     download: true,
   },
 ];
