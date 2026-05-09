@@ -79,7 +79,7 @@ export const projects: Project[] = [
     },
     {
         id: 7,
-        title: 'Main Project (In Progress)',
+        title: 'Main Project',
         image: MainProject,
         github: 'https://github.com/Ogrodowczyk87/Shift-Allocation-Automation-System.git',
         technologies: ['React', 'Node.js', 'GraphQL', 'PostgreSQL', 'AWS'],
