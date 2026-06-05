@@ -86,7 +86,7 @@ const Card = ({ className }: CardProps) => {
         <p className="code ml-16">
           Bio <span className="text-yellow-400 font-bold">=</span>{' '}
           <span className="text-green-400">
-            "Aspiring Platform and DevOps Engineer with a strong frontend background, focused on cloud technologies, automation, and scalable production-ready systems."
+            "Junior Software Engineer focused on React, TypeScript and AWS, with a strong frontend background and practical cloud deployment experience."
           </span>
         </p>
       </div>

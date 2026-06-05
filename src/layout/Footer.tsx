@@ -12,8 +12,8 @@ const Footer = () => {
               About Me
             </h2>
             <p className="text-slate-300 mb-4">
-              Aspiring Platform / DevOps Engineer with a frontend background,
-              focused on AWS, automation, CI/CD and production-oriented cloud
+              Junior Software Engineer focused on React, TypeScript and AWS,
+              building production-oriented frontend and cloud-connected
               applications.
             </p>
           </section>

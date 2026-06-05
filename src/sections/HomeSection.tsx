@@ -16,7 +16,7 @@ import {
 import { useEffect, useState } from 'react';
 
 const HomeSection = () => {
-const roleText = 'Aspiring Platform / DevOps Engineer';
+const roleText = 'Junior Software Engineer | React, TypeScript & AWS';
 const [typedText, setTypedText] = useState('');
 
 useEffect(() => {
@@ -75,29 +75,29 @@ useEffect(() => {
               variants={itemVariants}
             >
               <motion.p variants={itemVariants}>
-                <span className="text-3xl leading-none align-top">A</span>spiring
-                Platform / DevOps Engineer with a strong foundation in frontend
-                development (JavaScript, TypeScript, React) and a focused transition
-                into cloud infrastructure, automation and system reliability.
+                <span className="text-3xl leading-none align-top">J</span>unior
+                Software Engineer focused on frontend development with React,
+                TypeScript and JavaScript, supported by practical AWS and cloud
+                deployment experience.
               </motion.p>
 
               <motion.p variants={itemVariants}>
-                Experienced in building and deploying applications on AWS, working
-                with services such as EC2, S3, IAM, CloudFront and RDS. Familiar with
-                CI/CD pipelines using GitHub Actions and comfortable working in Linux
-                environments (CLI, permissions, system operations).
+                I build and deploy applications using modern frontend technologies and
+                AWS services such as EC2, S3, IAM, CloudFront and RDS. I&apos;m also
+                familiar with CI/CD workflows using GitHub Actions and comfortable
+                working in Linux environments.
               </motion.p>
 
               <motion.p variants={itemVariants}>
-                Currently developing practical skills through the Amazon Career Choice
-                Cloud Support Specialist programme, focusing on cloud architecture and
-                infrastructure concepts.
+                Currently developing my cloud skills through the Amazon Career Choice
+                Cloud Support Specialist programme, with a focus on cloud architecture
+                and infrastructure fundamentals.
               </motion.p>
 
               <motion.p variants={itemVariants}>
-                Focused on Platform / DevOps / Cloud Engineering roles, with a strong
-                interest in automation, scalable systems and production-ready
-                infrastructure.
+                I&apos;m looking for Junior Software Engineer or Frontend Developer roles
+                where I can combine React, TypeScript and AWS to build clean, reliable
+                and production-ready applications.
               </motion.p>
             </motion.div>
 
