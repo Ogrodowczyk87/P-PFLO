@@ -30,7 +30,7 @@ export const navigationItems: NavItem[] = [
   {
     id: 6,
     label: 'CV',
-    href: '/RafalCV.pdf',
+    href: '/CV.pdf',
     download: true,
   },
 ];
