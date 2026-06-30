@@ -124,7 +124,7 @@ export const projects: Project[] = [
         id: 8,
         title: 'DocuFlow AWS',
         image: DocuFlow,
-        github: '',
+        github: 'https://github.com/Ogrodowczyk87/Smart-Document-Processing-Platform-na-AWS-DocuFlow-AWS',
         technologies: [
             'React',
             'TypeScript',
