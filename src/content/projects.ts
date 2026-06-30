@@ -6,6 +6,7 @@ import phonebook from '../assets/phonebook.png';
 import BetterShip from '../assets/BetterShip.png';
 import NEUROFORAGE from '../assets/NEUROFORAGE.png';
 import MainProject from '../assets/main.png';
+import DocuFlow from '../assets/DockuFLow.png';
 
 export interface TechnologyGroup {
     category: string;
@@ -118,5 +119,21 @@ export const projects: Project[] = [
         ],
         description:
             'Shift Allocation Automation System is a production-oriented cloud application designed to automate workforce planning in a high-volume operational environment of around 200 employees.\n\nIt applies business rules, training constraints and rotation logic to improve workload distribution, reduce planning time and minimise operational errors.\n\nThe platform is being built with React, Node.js, GraphQL and PostgreSQL and deployed on AWS using Amazon RDS, App Runner, S3, CloudFront, Cognito and CloudWatch.\n\nThis is a real-world system focused on scalability, maintainability and reliable day-to-day operation rather than a demo-only project.',
+    },
+    {
+        id: 8,
+        title: 'DocuFlow AWS',
+        image: DocuFlow,
+        github: '',
+        technologies: [
+            'React',
+            'TypeScript',
+            'AWS Lambda',
+            'Amazon S3',
+            'AWS CDK',
+            'Presigned URLs',
+        ],
+        description:
+            'A serverless platform for securely uploading and processing documents. Built with React and TypeScript using AWS Lambda, Amazon S3, AWS CDK and presigned URLs, with status monitoring and an automated document workflow.',
     },
 ];

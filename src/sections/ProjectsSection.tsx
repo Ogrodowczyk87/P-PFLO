@@ -41,7 +41,7 @@ const ProjectsSection = () => {
                   alt={project.title}
                   className={`${project.id === 5 || project.id === 6
                       ? 'h-32 w-32 object-contain'
-                      : project.id === 7
+                      : project.id === 7 || project.id === 8
                         ? 'w-full h-full object-contain p-2'
                       : 'w-full h-full object-cover'
                     }`}
