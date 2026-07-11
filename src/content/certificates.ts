@@ -28,8 +28,8 @@ export const certificates: Certificate[] = [
     id: 3,
     title: 'Cloud Support Specialist',
     issuer: 'CorelationOne',
-    date: 'currently in progress',
-    link: '#',
+    date: 'January–June 2026',
+    link: 'https://www.credential.net/af4702c0-9365-4466-9c66-1c844130d651#acc.HgWufik9',
     image: Fire
   }
 ];
