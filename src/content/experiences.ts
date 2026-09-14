@@ -7,21 +7,6 @@ export interface Experience {
 
 export const experiences: Experience[] = [
     {
-        title: '20.09.2013 - 30.02.2015',
-        cardTitle: 'Arla Foods',
-        cardSubtitle: 'Operations Associate',
-        cardDetailedText: 
-            ``,
-    },
-    {
-        title: '1.067-2015 - 30.06.2021',
-        cardTitle: 'NFT',
-        cardSubtitle: 'Operations Associate',
-        cardDetailedText:
-            '',
-
-    },
-    {
         title: '1.07.2021 - 15.09.2022',
         cardTitle: 'Euro Polymers Group',
         cardSubtitle: 'Roofer',
