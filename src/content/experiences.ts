@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
         cardDetailedText: 'Performed root-cause analysis on production issues, interpreted technical schematics and documentation, and created operational reports and spreadsheets to improve production tracking and efficiency.',   
     },
     {
-        title: '20.09.2022 - Present',
+        title: '20.09.2022 - 01.09.2026',
         cardTitle: 'Amazon',
         cardSubtitle: 'Operations Associate at Amazon',
         cardDetailedText: 'Responsible for fulfillment operations including picking, packing, and dispatching orders. Ensuring proper inventory management with accurate labeling and storage. Maintaining workplace safety standards and contributing to a fast-paced, efficient work environment.',
