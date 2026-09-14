@@ -40,4 +40,10 @@ export const experiences: Experience[] = [
         cardSubtitle: 'Operations Associate at Amazon',
         cardDetailedText: 'Responsible for fulfillment operations including picking, packing, and dispatching orders. Ensuring proper inventory management with accurate labeling and storage. Maintaining workplace safety standards and contributing to a fast-paced, efficient work environment.',
     },
+    {
+        title: '07.09.2026 - Present',
+        cardTitle: 'A&O Shearman',
+        cardSubtitle: 'Accounts Payable Assistant',
+        cardDetailedText: 'Full-time · Hybrid · Belfast, Northern Ireland, United Kingdom',
+    },
 ];
