@@ -7,6 +7,7 @@ import BetterShip from '../assets/BetterShip.png';
 import NEUROFORAGE from '../assets/NEUROFORAGE.png';
 import MainProject from '../assets/main.png';
 import DocuFlow from '../assets/DockuFLow.png';
+import Numervia from '../assets/Numervia.png';
 
 export interface TechnologyGroup {
     category: string;
@@ -28,6 +29,7 @@ export const projects: Project[] = [
     {
         id: 9,
         title: 'Numervia',
+        image: Numervia,
         github: 'https://github.com/Ogrodowczyk87/numervia',
         status: 'In development',
         technologies: [],
