@@ -29,19 +29,19 @@ export const Navbar = () => {
     return (
         <nav
             aria-label="Main navigation"
-            className={`h-[120px] sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200 ${isSticky ? 'shadow-sm' : ''}`}
+            className={`h-[88px] sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-200 ${isSticky ? 'shadow-sm' : ''}`}
         >
             <div className='container mx-auto flex justify-between items-center h-full'>
-                <div className='w-56 p-2 ml-[50px]'>
-                    <img src={logo} alt='Rafal Ogrodowczyk logo' className='object-contain' />
+                <div className='w-56 shrink-0 ml-4 lg:ml-8'>
+                    <img src={logo} alt='Rafal Ogrodowczyk logo' className='navbar-logo' />
                 </div>
 
-                <div className='hidden md:block mr-[80px]'>
-                    <ul className="flex text-2xl gap-8 font-poppins">
+                <div className='hidden xl:block mr-8'>
+                    <ul className="flex text-base gap-2 font-poppins">
                         {navigationItems.map((item) => (
                             <li key={item.id}>
                                 <a
-                                    className="relative py-2 px-6 text-slate-800 hover:text-accent-yellow transition-colors duration-300"
+                                    className="relative py-2 px-4 text-slate-800 hover:text-accent-yellow transition-colors duration-300"
                                     href={item.href}
                                     download={item.download}
                                 >
@@ -53,7 +53,7 @@ export const Navbar = () => {
                 </div>
 
                 {/* Mobile menu toggle button */}
-                <div className='md:hidden mr-[20px]'>
+                <div className='xl:hidden mr-[20px]'>
                     <button
                         onClick={toggleMobileMenu}
                         aria-label="Toggle mobile menu"
@@ -66,7 +66,7 @@ export const Navbar = () => {
 
             {/* Mobile menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-white/95 backdrop-blur-sm shadow-sm absolute top-[120px] left-0 w-full z-40 border-t border-slate-200">
+                <div className="xl:hidden bg-white/95 backdrop-blur-sm shadow-sm absolute top-[88px] left-0 w-full z-40 border-t border-slate-200">
                     <ul className="flex flex-col text-xl gap-4 font-poppins p-4">
                         {navigationItems.map((item) => (
                             <li key={item.id}>

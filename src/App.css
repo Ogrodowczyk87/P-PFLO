@@ -1,66 +1,129 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.portfolio-theme {
+  --surface: #112236;
+  --edge: #36526b;
+  --muted: #bdcce0;
+  min-height: 100vh;
+  color: #f5f7ff;
+  background:
+    radial-gradient(ellipse at 85% 8%, #46277330, transparent 28%),
+    radial-gradient(ellipse at 10% 18%, #00d5c01a, transparent 30%),
+    #081321;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+html { scroll-behavior: smooth; scroll-padding-top: 104px; }
+body { background: #081321; }
+.portfolio-theme main > section { background: transparent; }
+.portfolio-theme section { scroll-margin-top: 104px; }
+.portfolio-theme :is(.text-dark-blue, .text-slate-800) { color: #f5f7ff; }
+.portfolio-theme :is(.text-slate-700, .text-slate-600, .text-slate-500) { color: var(--muted); }
+.portfolio-theme .text-accent-yellow { color: #26e8d5; }
+.portfolio-theme :is(.border-slate-200, .border-slate-300, .border-light-gray) { border-color: var(--edge); }
+.portfolio-theme :is(.bg-white, .bg-slate-50, .bg-slate-100) { background-color: var(--surface); }
+.portfolio-theme :is(.bg-blue-50, .bg-blue-100) { background-color: #14323e; }
+.portfolio-theme :is(.text-blue-800, .text-blue-700) { color: #6ff3e7; }
+.portfolio-theme .border-blue-200 { border-color: #237c80; }
+.portfolio-theme :is(.rounded-xl, .rounded-2xl).border {
+  background-image: linear-gradient(125deg, #20ddce0b, #ac6cf70b);
+  box-shadow: inset 0 1px 0 #ffffff08, 0 16px 40px #0000001c;
+  transition: border-color 200ms, box-shadow 200ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.portfolio-theme :is(.rounded-xl, .rounded-2xl).border:hover {
+  border-color: #4a9aab;
+  box-shadow: 0 10px 32px #0de4d00d;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.portfolio-theme h2 { letter-spacing: -0.035em; }
+.portfolio-theme main > section:not(:first-child) h2::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #16e8d0, #a75aff);
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.portfolio-theme :is(a, button).bg-dark-blue {
+  color: #061c29;
+  background: #1ce5cf;
+  border: 1px solid #3ff4df;
+  box-shadow: 0 0 24px #14e0ca17;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.portfolio-theme :is(a, button).bg-dark-blue:hover {
+  background: #6bf8e7;
+  box-shadow: 0 0 28px #14e0ca30;
 }
-
-.card {
-  padding: 2em;
+.portfolio-theme a:hover { color: #40eddd; }
+.portfolio-theme :is(a, button).bg-dark-blue:hover { color: #061c29; }
+.portfolio-theme :is(a, button, input, textarea):focus-visible {
+  outline: 2px solid #40eddd;
+  outline-offset: 4px;
 }
+.portfolio-theme nav {
+  background: #091421ed;
+  border-color: #263b50;
+  backdrop-filter: blur(18px);
+}
+.portfolio-theme nav > .absolute { background: #0d1c2ff5; }
+.portfolio-theme nav a { border-radius: 12px; }
+.navbar-logo {
+  display: block;
+  width: 224px;
+  height: 72px;
+  object-fit: cover;
+  filter: grayscale(1) brightness(2) contrast(3) invert(1);
+  mix-blend-mode: screen;
+}
+.portfolio-theme nav a:hover { background: #0f4e50; color: #4ff6e4; }
+.portfolio-theme footer { background: #070f1b; border-top: 1px solid #293b51; }
+.portfolio-theme input,
+.portfolio-theme textarea { color: #f5f7ff; color-scheme: dark; }
+.portfolio-theme input::placeholder,
+.portfolio-theme textarea::placeholder { color: #8fa5bc; }
 
-.read-the-docs {
-  color: #888;
-} */
-
-
-/* Portrait treatment scoped to the Home section. */
+/* Light and depth are drawn in CSS so the hero stays sharp at every width. */
+.portfolio-theme main > section:first-child {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 75% 40%, #16e8d01b, transparent 48%),
+    radial-gradient(ellipse at 95% 80%, #9952fa20, transparent 45%);
+}
+.portfolio-theme main > section:first-child::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 125%;
+  height: 230px;
+  left: -12%;
+  bottom: -130px;
+  border-radius: 50%;
+  border-top: 2px solid #27e9dc99;
+  box-shadow: 0 -16px 50px #12dfc92b, inset 0 20px 45px #8461ef20;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
 .home-intro-panel {
-  background: linear-gradient(125deg, #eff6ff 0%, #ffffff 48%, #f8fafc 100%);
-  border-color: #dbe5f0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
 }
-
+.portfolio-theme .home-intro-panel.border:hover { border-color: transparent; box-shadow: none; }
+.home-intro-panel h1 { letter-spacing: -0.045em; line-height: 1.15; }
+.home-intro-panel h1 > span {
+  background: linear-gradient(100deg, #1bf0d3, #55c9ff 55%, #b564fa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .home-portrait-frame {
   position: relative;
-  isolation: isolate;
   width: 100%;
-  max-width: 480px;
+  max-width: 440px;
   margin-inline: auto;
   padding: 8px;
-  border: 1px solid #c4d7e8;
+  border: 1px solid #3da4ae;
   border-radius: 28px;
-  background: linear-gradient(145deg, #ffffff, #dcebf5 60%, #b9d9ed);
-  box-shadow: 0 20px 48px -20px #173b6355;
+  background: linear-gradient(140deg, #26e8d033, #112236 55%, #a05aff40);
+  box-shadow: -18px 0 65px #00d7c51a, 20px 20px 65px #9554f51a;
+  transform: rotate(2deg);
 }
-
 .home-portrait {
   display: block;
   width: 100%;
@@ -70,15 +133,22 @@
   border-radius: 21px;
   background: #102337;
 }
-
+.portfolio-theme .profileCard_container {
+  border-color: #2b6e79;
+  background: radial-gradient(circle, #16dfc218, transparent 70%);
+}
+/* Keep original technology marks legible on their small icon tiles. */
+.portfolio-theme .profile_item > :is(span, div) { background-color: #e6f6f7; }
+@media (min-width: 768px) {
+  .home-intro-panel > div { flex-direction: row-reverse; }
+}
 @media (max-width: 767px) {
-  .home-portrait-frame {
-    max-width: 380px;
-    padding: 6px;
-    border-radius: 22px;
-  }
-
-  .home-portrait {
-    border-radius: 16px;
-  }
+  .home-intro-panel { padding: 24px; margin-block: 12px 44px; }
+  .home-portrait-frame { max-width: 300px; padding: 6px; border-radius: 22px; }
+  .home-portrait { border-radius: 16px; }
+  .portfolio-theme main > section { padding-inline: 16px; }
+  .portfolio-theme h2 { font-size: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

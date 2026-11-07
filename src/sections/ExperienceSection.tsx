@@ -61,11 +61,14 @@ const ExperienceSection = () => {
                         showAllCardsHorizontal={false}
                         enableOutline={false}
                         theme={{
-                            primary: '#0F172A',
-                            secondary: '#2563EB',
-                            cardBgColor: '#FFFFFF',
-                            cardForeColor: '#0F172A',
-                            titleColor: '#2563EB',
+                            primary: '#24dfcf',
+                            secondary: '#18364a',
+                            cardBgColor: '#112235',
+                            cardTitleColor: '#FFFFFF',
+                            cardSubtitleColor: '#E2E8F0',
+                            cardDetailsColor: '#D5DFEF',
+                            textColor: '#E2E8F0',
+                            titleColor: '#99F6E4',
                             titleColorActive: '#FFFFFF',
                         }}
                     />

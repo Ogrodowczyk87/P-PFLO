@@ -11,7 +11,7 @@ import CertificatesSection from './sections/CertificatesSection';
 
 function App() {
   return (
-    <div className="bg-gradient-to-br from-blue-100 via-blue-50 via-white to-yellow-100">
+    <div className="portfolio-theme">
       <Navbar />
       <main>
         <HomeSection />
