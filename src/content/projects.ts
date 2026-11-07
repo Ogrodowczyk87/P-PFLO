@@ -16,14 +16,23 @@ export interface TechnologyGroup {
 export interface Project {
     id: number;
     title: string;
-    image: string;
-    github: string;
+    image?: string;
+    github?: string;
+    status?: 'In development';
     technologies: string[];
     technologyGroups?: TechnologyGroup[];
     description: string;
 }
 
 export const projects: Project[] = [
+    {
+        id: 9,
+        title: 'Numervia',
+        github: 'https://github.com/Ogrodowczyk87/numervia',
+        status: 'In development',
+        technologies: [],
+        description: 'An early-stage web application for comparing personal finance scenarios. The first planned release will compare mortgage repayments with and without regular overpayments, including repayment schedules, interest costs and balance charts. Planned stack: Python, FastAPI, React and TypeScript. These features are under development and are not yet available.',
+    },
     {
         id: 1,
         title: 'Software House',

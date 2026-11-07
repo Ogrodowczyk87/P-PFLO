@@ -36,7 +36,7 @@ const ProjectsSection = () => {
               viewport={{ once: true, amount: 0.2 }}
             >
               <div className="h-48 bg-slate-50 flex items-center justify-center">
-                <img
+                {project.image ? <img
                   src={project.image}
                   alt={project.title}
                   className={`${project.id === 5 || project.id === 6
@@ -45,14 +45,24 @@ const ProjectsSection = () => {
                         ? 'w-full h-full object-contain p-2'
                       : 'w-full h-full object-cover'
                     }`}
-                />
+                /> : (
+                  <div className="text-center px-6">
+                    <span className="block text-3xl font-bold text-dark-blue tracking-tight">{project.title}</span>
+                    <span className="block mt-2 text-sm text-slate-600">Project in development</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-xl font-semibold text-dark-blue mb-2">
                   {project.title}
                 </h3>
+                {project.status && (
+                  <span className="self-start inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800 mb-4">
+                    {project.status}
+                  </span>
+                )}
                 <p className="text-slate-700 mb-4 whitespace-pre-line">{project.description}</p>
-                <div className="mb-4">
+                {(project.technologies.length > 0 || Boolean(project.technologyGroups?.length)) && <div className="mb-4">
                   <h4 className="font-semibold text-dark-blue">Technologies:</h4>
                   {project.technologyGroups?.length ? (
                     <div className="space-y-3 max-h-72 overflow-y-auto pr-1 mt-2">
@@ -89,7 +99,7 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                   )}
-                </div>
+                </div>}
                 {project.github && (
                   <a
                     href={project.github}

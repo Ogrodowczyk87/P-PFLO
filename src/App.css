@@ -40,3 +40,45 @@
 .read-the-docs {
   color: #888;
 } */
+
+
+/* Portrait treatment scoped to the Home section. */
+.home-intro-panel {
+  background: linear-gradient(125deg, #eff6ff 0%, #ffffff 48%, #f8fafc 100%);
+  border-color: #dbe5f0;
+}
+
+.home-portrait-frame {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  padding: 8px;
+  border: 1px solid #c4d7e8;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #ffffff, #dcebf5 60%, #b9d9ed);
+  box-shadow: 0 20px 48px -20px #173b6355;
+}
+
+.home-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 21px;
+  background: #102337;
+}
+
+@media (max-width: 767px) {
+  .home-portrait-frame {
+    max-width: 380px;
+    padding: 6px;
+    border-radius: 22px;
+  }
+
+  .home-portrait {
+    border-radius: 16px;
+  }
+}

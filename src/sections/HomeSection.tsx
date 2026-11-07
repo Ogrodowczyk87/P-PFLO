@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Card from '../components/ui/Card';
+import rafal from '../assets/rafal-portrait.png';
 import { AnimateSvg } from '../components/ui/AnimateSvg';
 import { InstagramIcon } from '../components/icons/InstagramIcon';
 import { LinkedInIcon } from '../components/icons/LinkedInIcon';
@@ -40,13 +40,22 @@ useEffect(() => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.15 }}
       variants={sectionVariants}    >
-      <div className="container bg-white border border-slate-200 shadow-sm rounded-2xl p-8 md:p-10 mt-[60px] mb-[60px] transition-shadow hover:shadow-lg">
+      <div className="home-intro-panel container border shadow-sm rounded-2xl p-8 md:p-10 mt-[60px] mb-[60px]">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <motion.div
             className="w-full md:w-1/2"
             variants={cardVariants}
           >
-            <Card className="shadow-sm rounded-xl p-6 bg-slate-50 border border-slate-200" />
+            <div className="home-portrait-frame">
+              <img
+                src={rafal}
+                alt="Rafal Ogrodowczyk"
+                width={1254}
+                height={1254}
+                fetchPriority="high"
+                className="home-portrait"
+              />
+            </div>
           </motion.div>
 
           <motion.div
