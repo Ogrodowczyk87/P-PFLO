@@ -1,4 +1,10 @@
 .portfolio-theme {
+  --timeline-primary: #24dfcf;
+  --timeline-secondary: #18364a;
+  --timeline-card-title: #ffffff;
+  --timeline-subtitle: #e2e8f0;
+  --timeline-title: #99f6e4;
+  --timeline-active-text: #ffffff;
   --surface: #112236;
   --edge: #36526b;
   --muted: #bdcce0;
@@ -13,7 +19,9 @@
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: 104px; }
-body { background: #081321; }
+html { color-scheme: dark; background: #081321; }
+html[data-theme="light"] { color-scheme: light; background: #f5f8fc; }
+body { background: inherit; }
 .portfolio-theme main > section { background: transparent; }
 .portfolio-theme section { scroll-margin-top: 104px; }
 .portfolio-theme :is(.text-dark-blue, .text-slate-800) { color: #f5f7ff; }
@@ -59,12 +67,12 @@ body { background: #081321; }
   outline: 2px solid #40eddd;
   outline-offset: 4px;
 }
-.portfolio-theme nav {
+.portfolio-theme > nav {
   background: #091421ed;
   border-color: #263b50;
   backdrop-filter: blur(18px);
 }
-.portfolio-theme nav > .absolute { background: #0d1c2ff5; }
+.portfolio-theme > nav > .absolute { background: #0d1c2ff5; }
 .portfolio-theme nav a { border-radius: 12px; }
 .navbar-logo {
   display: block;
@@ -157,3 +165,74 @@ body { background: #081321; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* The same layout and components share two accessible color palettes. */
+[data-theme="light"] .portfolio-theme {
+  --timeline-primary: #2563eb;
+  --timeline-secondary: #dbeafe;
+  --timeline-card-title: #0f172a;
+  --timeline-subtitle: #334155;
+  --timeline-title: #1e40af;
+  --timeline-active-text: #1e3a8a;
+  --surface: #ffffff;
+  --edge: #cbd5e1;
+  --muted: #475569;
+  color: #0f172a;
+  background:
+    radial-gradient(ellipse at 85% 8%, #a78bfa18, transparent 28%),
+    radial-gradient(ellipse at 10% 18%, #14b8a612, transparent 30%),
+    #f5f8fc;
+}
+[data-theme="light"] .portfolio-theme :is(.text-dark-blue, .text-slate-800) { color: #0f172a; }
+[data-theme="light"] .portfolio-theme .text-accent-yellow { color: #0f766e; }
+[data-theme="light"] .portfolio-theme :is(.bg-blue-50, .bg-blue-100) { background-color: #e6f5f3; }
+[data-theme="light"] .portfolio-theme :is(.text-blue-800, .text-blue-700) { color: #115e59; }
+[data-theme="light"] .portfolio-theme .border-blue-200 { border-color: #99d6cf; }
+[data-theme="light"] .portfolio-theme :is(.rounded-xl, .rounded-2xl).border {
+  background-image: linear-gradient(125deg, #14b8a604, #8b5cf604);
+  box-shadow: 0 8px 28px #0f172a08;
+}
+[data-theme="light"] .portfolio-theme :is(.rounded-xl, .rounded-2xl).border:hover {
+  border-color: #0f766e;
+  box-shadow: 0 10px 32px #0f766e10;
+}
+[data-theme="light"] .portfolio-theme > nav { background: #ffffffed; border-color: #cbd5e1; }
+[data-theme="light"] .portfolio-theme > nav > .absolute { background: #fffffff5; }
+[data-theme="light"] .navbar-logo { filter: none; mix-blend-mode: multiply; }
+[data-theme="light"] .portfolio-theme nav a:hover { background: #ccfbf1; color: #115e59; }
+[data-theme="light"] .portfolio-theme a:hover { color: #0f766e; }
+[data-theme="light"] .portfolio-theme :is(a, button).bg-dark-blue {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 16px #2563eb18;
+}
+[data-theme="light"] .portfolio-theme :is(a, button).bg-dark-blue:hover { background: #1d4ed8; color: #ffffff; }
+[data-theme="light"] .portfolio-theme :is(a, button, input, textarea):focus-visible { outline-color: #0f766e; }
+[data-theme="light"] .portfolio-theme input,
+[data-theme="light"] .portfolio-theme textarea { color: #0f172a; color-scheme: light; }
+[data-theme="light"] .portfolio-theme input::placeholder,
+[data-theme="light"] .portfolio-theme textarea::placeholder { color: #64748b; }
+[data-theme="light"] .portfolio-theme footer { background: #e8eff6; border-color: #cbd5e1; }
+[data-theme="light"] .portfolio-theme footer .text-white { color: #0f172a; }
+[data-theme="light"] .portfolio-theme footer :is(.text-slate-300, .text-slate-400) { color: #475569; }
+[data-theme="light"] .portfolio-theme footer .border-slate-700 { border-color: #cbd5e1; }
+[data-theme="light"] .home-intro-panel h1 > span { background-image: linear-gradient(100deg, #0f766e, #1d4ed8 55%, #7e22ce); }
+[data-theme="light"] .portfolio-theme .home-intro-panel.border { border-color: transparent; box-shadow: none; }
+[data-theme="light"] .home-portrait-frame {
+  border-color: #66aaa7;
+  background: linear-gradient(140deg, #99f6e433, #ffffff 55%, #ddd6fe66);
+  box-shadow: -18px 0 65px #0d948010, 20px 20px 65px #7c3aed10;
+}
+[data-theme="light"] .home-portrait { background: #e8eff6; }
+[data-theme="light"] .portfolio-theme .profileCard_container { border-color: #99c9c7; }
+.navbar-logo { max-width: 100%; }
+.theme-toggle:hover { background: #14323e; }
+[data-theme="light"] .theme-toggle:hover { background: #e6f5f3; }
+
+[data-theme="light"] .portfolio-theme a.border.text-dark-blue {
+  color: #1d4ed8;
+  border-color: #93c5fd;
+}
+[data-theme="light"] .portfolio-theme a.border.text-dark-blue:hover { background: #eff6ff; border-color: #2563eb; }
+[data-theme="light"] .portfolio-theme :is(a, button, input, textarea):focus-visible { outline-color: #2563eb; }

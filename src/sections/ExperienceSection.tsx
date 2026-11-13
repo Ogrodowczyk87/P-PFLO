@@ -61,15 +61,15 @@ const ExperienceSection = () => {
                         showAllCardsHorizontal={false}
                         enableOutline={false}
                         theme={{
-                            primary: '#24dfcf',
-                            secondary: '#18364a',
-                            cardBgColor: '#112235',
-                            cardTitleColor: '#FFFFFF',
-                            cardSubtitleColor: '#E2E8F0',
-                            cardDetailsColor: '#D5DFEF',
-                            textColor: '#E2E8F0',
-                            titleColor: '#99F6E4',
-                            titleColorActive: '#FFFFFF',
+                            primary: 'var(--timeline-primary)',
+                            secondary: 'var(--timeline-secondary)',
+                            cardBgColor: 'var(--surface)',
+                            cardTitleColor: 'var(--timeline-card-title)',
+                            cardSubtitleColor: 'var(--timeline-subtitle)',
+                            cardDetailsColor: 'var(--muted)',
+                            textColor: 'var(--timeline-subtitle)',
+                            titleColor: 'var(--timeline-title)',
+                            titleColorActive: 'var(--timeline-active-text)',
                         }}
                     />
                 </motion.div>

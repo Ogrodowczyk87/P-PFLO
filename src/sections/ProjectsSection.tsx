@@ -17,7 +17,7 @@ const ProjectsSection = () => {
       viewport={{ once: true, amount: 0.12 }}
       variants={fadeUpVariants}
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+      <div className="container mx-auto px-2 sm:px-6 md:px-12 lg:px-20">
         <motion.h2
           className="text-4xl font-poppins font-bold text-dark-blue text-center mb-12"
           variants={fadeUpVariants}
@@ -25,13 +25,13 @@ const ProjectsSection = () => {
           My Projects
         </motion.h2>
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch"
           variants={gridStaggerVariants}
         >
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              className="h-full min-h-[620px] bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden transition-shadow hover:shadow-lg flex flex-col"
+              className="h-full min-w-0 min-h-[620px] bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden transition-shadow hover:shadow-lg flex flex-col [overflow-wrap:anywhere]"
               variants={revealCardVariants}
               viewport={{ once: true, amount: 0.2 }}
             >
